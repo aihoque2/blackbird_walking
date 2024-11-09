@@ -1,2 +1,0 @@
-/usr/bin/ar qc libjoint_controller.a CMakeFiles/joint_controller.dir/src/EffortController.cpp.o
-/usr/bin/ranlib libjoint_controller.a

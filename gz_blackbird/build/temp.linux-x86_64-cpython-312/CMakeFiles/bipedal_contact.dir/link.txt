@@ -1,2 +1,0 @@
-/usr/bin/ar qc libbipedal_contact.a CMakeFiles/bipedal_contact.dir/src/BipedalContact.cpp.o
-/usr/bin/ranlib libbipedal_contact.a
