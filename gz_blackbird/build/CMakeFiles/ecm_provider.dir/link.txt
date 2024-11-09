@@ -1,0 +1,2 @@
+/usr/bin/ar qc libecm_provider.a CMakeFiles/ecm_provider.dir/src/ECMProvider.cpp.o
+/usr/bin/ranlib libecm_provider.a

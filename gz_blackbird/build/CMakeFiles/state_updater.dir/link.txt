@@ -1,0 +1,2 @@
+/usr/bin/ar qc libstate_updater.a CMakeFiles/state_updater.dir/src/RobotStateUpdater.cpp.o
+/usr/bin/ranlib libstate_updater.a

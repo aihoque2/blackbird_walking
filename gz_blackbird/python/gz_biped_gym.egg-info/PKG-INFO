@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: gz_biped_gym
+Version: 0.1.0
+Summary: Bipedal robot environment using Gym, gz-harmonic, and pybind11
+Author: Ammar Hoque
+Requires-Dist: gym
+Requires-Dist: numpy
+Requires-Dist: pybind11

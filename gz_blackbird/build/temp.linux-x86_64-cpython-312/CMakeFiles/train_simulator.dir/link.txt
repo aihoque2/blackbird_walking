@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtrain_simulator.a CMakeFiles/train_simulator.dir/src/Simulator.cpp.o
+/usr/bin/ranlib libtrain_simulator.a
