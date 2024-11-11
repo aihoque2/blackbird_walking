@@ -4,15 +4,15 @@ from gym import spaces
 import sys
 import blackbird_rl
 import os
-import pkg_resources
+import importlib.resources
 import sys
-
+from pathlib import Path
 
 
 class BlackbirdGazebo(gym.Env):
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
 
-    def __init__(self, render_mode=None):
+    def __init__(self,  world_path, render_mode=None):
 
         set_gui = False
         if render_mode is not None:
@@ -20,11 +20,25 @@ class BlackbirdGazebo(gym.Env):
         else:
             set_gui = False
 
-        # Get the full path to `empty.world` in `gz_biped_gym.world`
-        pkg_path = pkg_resources.resource_filename('gz_biped_gym', '/')
-        print(pkg_path)
-        sys.path.append(pkg_path)
-        self.sim = blackbird_rl.TrainSimulator(set_gui, pkg_path+'world/empty.world')
+
+        # # Step 1: Get the absolute path to `blackbird.sdf` using `importlib.resources`
+        # with importlib.resources.path('gz_biped_gym.urdf', 'blackbird.sdf') as sdf_path:
+        #     absolute_sdf_path = str(sdf_path.resolve())  # Ensure it's an absolute path
+
+        # # Get the full path to `empty.world` in `gz_biped_gym.world`
+        # with importlib.resources.path('gz_biped_gym.world', 'empty.world') as temp_world_path:
+        #     self.world_path = temp_world_path
+
+        # package_dir = importlib.resources.files('gz_biped_gym')
+        
+        # os.environ["GZ_SIM_RESOURCE_PATH"] = package_dir.absolute().as_posix()
+
+        # print("package_dir: ", package_dir.absolute().as_posix())
+        # print("current dir: ", os.listdir())
+
+
+
+        self.sim = blackbird_rl.TrainSimulator(set_gui, world_path)
         obs_low = np.full(32, -np.inf)  # -inf for each element
         obs_high = np.full(32, np.inf)  # inf for each element
 

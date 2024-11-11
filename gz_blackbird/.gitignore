@@ -1,2 +1,4 @@
 build/
 pybind_test.py
+__pycache__
+*.egg-info

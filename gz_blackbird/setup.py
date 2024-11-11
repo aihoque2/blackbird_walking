@@ -38,7 +38,7 @@ setup(
     name='gz_biped_gym',
     version='0.1.0',
     author='Ammar Hoque',
-    description='Bipedal robot environment using Gym, gz-harmonic, and pybind11',United States
+    description='Bipedal robot environment using Gym, gz-harmonic, and pybind11',
     long_description='',
     ext_modules=[CMakeExtension('blackbird_rl', sourcedir='.')],
     cmdclass=dict(build_ext=CMakeBuild),
@@ -47,5 +47,10 @@ setup(
     package_dir={"": "python"},
     install_requires=['gym', 'numpy', 'pybind11'],
     include_package_data=True,
-    data_files = [('world', ['world/empty.world']), ('urdf', ['urdf/blackbird.sdf'])]
-)
+    package_data={
+        'gz_biped_gym': [
+            'world/*.world',
+            'urdf/*.sdf',
+        ],
+    },
+    )
