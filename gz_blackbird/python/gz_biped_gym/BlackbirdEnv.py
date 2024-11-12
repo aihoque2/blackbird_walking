@@ -96,3 +96,14 @@ class BlackbirdGazebo(gym.Env):
 
         self.steps += 1
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}
+
+if __name__ == '__main__':
+    env = BlackbirdGazebo(render_mode="human")
+
+    for i in range(10000):
+        action = np.random.uniform(low=-50.0, high=50.0, size=(10,))
+        # action = np.zeros(10)
+        state, reward, terminal, _ = env.step(action)
+        if (terminal):
+            print(f"reached a terminal at idx {i}. resetting...")
+            env.reset()

@@ -13,6 +13,12 @@
 #include <string>
 #include <random>
 
+/*
+test a proof of concept
+of a reinforcement learning
+environment
+*/
+
 int main(int argc, char **argv)
 {
     std::string file_path = "world/empty.world";
@@ -28,8 +34,8 @@ int main(int argc, char **argv)
                                         0.0, 0.0, 0.0, 0.0, 0.0 /* Right Js */};
 
 
-    double lower_bound = -10.0;
-    double upper_bound = 10.0;
+    double lower_bound = -40.0;
+    double upper_bound = 40.0;
  
     std::uniform_real_distribution<double> unif(lower_bound,
                                            upper_bound);
