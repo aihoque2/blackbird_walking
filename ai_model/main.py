@@ -2,6 +2,8 @@ from gz_biped_gym import BlackbirdEnv
 import numpy as np
 import time
 
+import python.model as models
+
 env = BlackbirdEnv.BlackbirdGazebo(world_path="world/empty.world", render_mode="human")
 i = 0
 while True:

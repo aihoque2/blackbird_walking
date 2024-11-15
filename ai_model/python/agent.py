@@ -49,13 +49,22 @@ class BlackBirdDDPG:
         
         term_var = not terminal
         y_i = r1 + GAMMA*term_var*torch.squeeze(self.critic_tgt.forward(s2, a2))
-        y_predicted = torch.squeeze(self.critic.forward(s1, a1))
+        y_predicted = torch.squeeze(self.critic.forward(s1, a1.detach()))
         
         # Update q function
-    
+        loss_critic = F.smooth_l1_loss(y_predicted, y_i) 
+        self.critic.optim.zero_grad()
+        loss_critic.backward()
+        self.critic.optim.step()
 
-        # update pi function 
-        pass
+        # update pi function
+        loss_actor = -1*torch.sum(self.critic.forward(s1, self.actor.forward(s1))) #we wanna max this value, so we trick the optimizer by calculating -
+        self.actor.optim.zero_grad()
+        loss_actor.backward()
+        self.actor.optim.step()
+
+        soft_update(self.critic_tgt, self.critic, TAU)
+        soft_update(self.actor_tgt, self.actor, TAU)
 
     def eval(self):
         self.actor.eval()
@@ -96,7 +105,16 @@ class BlackBirdDDPG:
         self.critic_tgt.cuda()
 
     def seed(self, s):
-        pass
+        torch.manual_seed(s)
+        if (torch.cuda.is_available()):
+            torch.cuda.manual_seed(s)
+
+    def save_model(self)
+        """
+        save the model
+        """
+        actor_script = torch.jit.script(self.actor)
+        actor_script.save('actor_script.pt')
 
 
     
