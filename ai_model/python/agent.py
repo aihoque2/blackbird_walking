@@ -1,40 +1,48 @@
-from model import Actor, Critic
+from python.model import Actor, Critic
 import torch
+import torch.nn.functional as F
+import torch.optim as optim
+
 import numpy as np
-from utils.helper_funcs import *
+import python.utils as utils
+from python.utils.helper_funcs import *
+from python.utils.memory import ReplayMemory
 
 # Hyperparameters
 GAMMA = 0.99
 LEARNING_RATE = 0.001 # for both actor and critic
 TAU = 0.001 # soft update of target networks
 
-STATE_SIZE = 32
+STATE_SIZE = 35
 AXN_SIZE = 10
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-class BlackBirdDDPG:
-    def __init__(self, env, state_size, action_size,):
+class BlackbirdDDPG:
+    def __init__(self, env, state_size, action_size):
         
-        self.memory = utils.memory.ReplayMemeory
+        self.state_size = state_size
+        self.action_size = action_size
+
+        self.memory = utils.memory.ReplayMemory
         self.action_lim = 50.0
         self.batch_size = 64
 
         # our models
-        self.actor = Actor(self.state_size, self.action_size, action_lim)
-        self.actor_tgt = Actor(self.state_size, self.action_size, action_lim)
-        self.actor_optim = Adam(self.actor.parameters(), lr=self.prate)
+        self.actor = Actor(self.state_size, self.action_size, self.action_lim)
+        self.actor_tgt = Actor(self.state_size, self.action_size, self.action_lim)
+        self.actor_optim = optim.Adam(self.actor.parameters(), lr=LEARNING_RATE)
 
         self.critic = Critic(self.state_size, self.action_size)
         self.critic_tgt = Critic(self.state_size, self.action_size) # used to calculate y_i
-        self.critic_optim  = Adam(self.critic.parameters(), lr=self.rate)
+        self.critic_optim  = optim.Adam(self.critic.parameters(), lr=LEARNING_RATE)
 
         hard_update(self.actor_tgt, self.actor)
         hard_update(self.critic_tgt, self.critic)
 
         # for SARS vector
-        self.s_t = torch.zeroes(STATE_SIZE) # get initial states from self.reset(state)
-        self.a_t = torch.zeroes(AXN_SIZE)
+        self.s_t = torch.zeros(STATE_SIZE) # get initial states from self.reset(state)
+        self.a_t = torch.zeros(AXN_SIZE)
         self.training = True
 
         if torch.cuda.is_available():
@@ -85,7 +93,7 @@ class BlackBirdDDPG:
             self.memory.append(self.s_t, self.a_t, r_t, s_t2, terminated)
             self.s_t = s_t2
         else:
-            raise RuntimeError("add_exeperience can only be done in training mode")
+            raise RuntimeError("add_experience can only be done in training mode")
 
     def random_action(self):
         lo, hi = -self.action_lim, self.action_lim
@@ -95,7 +103,7 @@ class BlackBirdDDPG:
 
     def reset(self, state):
          obs = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)
-         selt.s_t = obs
+         self.s_t = obs
          self.noise_model.reset_states()
 
     def cuda(self):
@@ -109,7 +117,7 @@ class BlackBirdDDPG:
         if (torch.cuda.is_available()):
             torch.cuda.manual_seed(s)
 
-    def save_model(self)
+    def save_model(self):
         """
         save the model
         """
