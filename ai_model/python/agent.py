@@ -7,6 +7,7 @@ import numpy as np
 import python.utils as utils
 from python.utils.helper_funcs import *
 from python.utils.memory import ReplayMemory
+from python.utils.noise_model import OrnsteinUhlenbeckProcess
 
 # Hyperparameters
 GAMMA = 0.99
@@ -24,7 +25,7 @@ class BlackbirdDDPG:
         self.state_size = state_size
         self.action_size = action_size
 
-        self.memory = utils.memory.ReplayMemory
+        self.memory = ReplayMemory(size=int(7e6))
         self.action_lim = 50.0
         self.batch_size = 64
 
@@ -44,6 +45,8 @@ class BlackbirdDDPG:
         self.s_t = torch.zeros(STATE_SIZE) # get initial states from self.reset(state)
         self.a_t = torch.zeros(AXN_SIZE)
         self.training = True
+
+        self.noise_model = OrnsteinUhlenbeckProcess(theta=0.15, sigma=0.2, mu=0.0, size=self.action_size, )
 
         if torch.cuda.is_available():
             self.cuda()
@@ -81,19 +84,19 @@ class BlackbirdDDPG:
         self.critic.eval()
         self.critic_tgt.eval()
 
-    def add_experience(self, r_t, s_t2, terminated):
+    def add_experience(self, r_t, s_t2, terminal):
         """
         AKA observe()
         add experience to replay buffer
         """
-        if self.is_training:
+        if self.training:
             s_t2 = torch.tensor(s_t2, dtype=torch.float32, device=device).unsqueeze(0)
             r_t = torch.tensor([r_t], dtype=torch.float32, device=device)
-            terminated = torch.tensor([1.0 if terminated else 0.0], dtype=torch.float32, device=device)
+            terminated = torch.tensor([1.0 if terminal else 0.0], dtype=torch.float32, device=device)
             self.memory.append(self.s_t, self.a_t, r_t, s_t2, terminated)
             self.s_t = s_t2
         else:
-            raise RuntimeError("add_experience can only be done in training mode")
+            raise RuntimeError("add_experience() can only be done in training mode")
 
     def random_action(self):
         lo, hi = -self.action_lim, self.action_lim

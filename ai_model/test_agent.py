@@ -15,9 +15,10 @@ i = 0
 while True:
     action = agent.random_action()
     #action = np.zeros(10)
-    state, reward, terminal, _ = env.step(action)
+    next_state, reward, terminal, _ = env.step(action)
+    agent.add_experience(reward, next_state, terminal)
     if (terminal):
         print(f"reached a terminal at idx {i}. resetting...")
         env.reset()
-        agent.reset(state)
+        agent.reset(next_state)
     i+=1
