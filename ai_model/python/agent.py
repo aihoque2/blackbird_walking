@@ -57,26 +57,28 @@ class BlackbirdDDPG:
 
     def optimize(self):
         # run the optimization step
+        print("agent optimizing....")
 
         # get SARS vector
         s1, a1, r1, s2, terminal = self.memory.sample(self.batch_size)
         a2 = self.actor_tgt.forward(s2)
-        
-        term_var = not terminal
+
+
+        term_var = torch.tensor([1.0 if not val else 0.0 for val in terminal]).unsqueeze(0)
         y_i = r1 + GAMMA*term_var*torch.squeeze(self.critic_tgt.forward(s2, a2))
         y_predicted = torch.squeeze(self.critic.forward(s1, a1.detach()))
         
         # Update q function
         loss_critic = F.smooth_l1_loss(y_predicted, y_i) 
-        self.critic.optim.zero_grad()
+        self.critic_optim.zero_grad()
         loss_critic.backward()
-        self.critic.optim.step()
+        self.critic_optim.step()
 
         # update pi function
         loss_actor = -1*torch.sum(self.critic.forward(s1, self.actor.forward(s1))) #we wanna max this value, so we trick the optimizer by calculating -
-        self.actor.optim.zero_grad()
+        self.actor_optim.zero_grad()
         loss_actor.backward()
-        self.actor.optim.step()
+        self.actor_optim.step()
 
         soft_update(self.critic_tgt, self.critic, TAU)
         soft_update(self.actor_tgt, self.actor, TAU)
@@ -95,11 +97,8 @@ class BlackbirdDDPG:
         """
         if self.training:
             s_t2 = torch.tensor(s_t2, dtype=torch.float32, device=device).unsqueeze(0)
-            print("here's s_t2: ", s_t2)
             r_t = torch.tensor([r_t], dtype=torch.float32, device=device)
             terminated = torch.tensor([1.0 if terminal else 0.0], dtype=torch.float32, device=device)
-
-            print(f"add_experience() shape of a_t: {self.a_t.shape}")
 
             self.memory.append(self.s_t, self.a_t, r_t, s_t2, terminated)
             self.s_t = s_t2
@@ -110,7 +109,6 @@ class BlackbirdDDPG:
         lo, hi = -self.action_lim, self.action_lim
         action = (hi-lo)*torch.rand(10) + -50.0
         self.a_t = action.unsqueeze(0)
-        print(f"random_action() shape of a_t:{self.a_t.shape}" )
         return action.numpy()
     
     def select_action(self, s_t, decay_epsilon=True):
@@ -128,7 +126,6 @@ class BlackbirdDDPG:
         if decay_epsilon:
             self.epsilon -= self.depsilon
 
-        print(f"select_action() shape of a_t: {self.a_t.shape}")
         assert torch.is_tensor(self.a_t), "agent's a_t is not set as torch.Tensor"
         return action.reshape(-1)
 

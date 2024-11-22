@@ -17,7 +17,6 @@ while True:
         action = agent.random_action()
     else:
         action = agent.select_action(agent.s_t)
-        print(f"got action from select_action(): {action}")
 
     next_state, reward, terminal, _ = env.step(action)
     agent.add_experience(reward, next_state, terminal)
