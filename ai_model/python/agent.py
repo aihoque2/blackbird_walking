@@ -42,11 +42,15 @@ class BlackbirdDDPG:
         hard_update(self.critic_tgt, self.critic)
 
         # for SARS vector
-        self.s_t = torch.zeros(STATE_SIZE) # get initial states from self.reset(state)
-        self.a_t = torch.zeros(AXN_SIZE)
+        self.s_t = torch.zeros(STATE_SIZE).unsqueeze(0) # get initial states from self.reset(state)
+        self.a_t = torch.zeros(AXN_SIZE).unsqueeze(0)
         self.training = True
 
         self.noise_model = OrnsteinUhlenbeckProcess(theta=0.15, sigma=0.2, mu=0.0, size=self.action_size, )
+
+        # constants
+        self.epsilon = 1.0
+        self.depsilon = 1.0/50000.0
 
         if torch.cuda.is_available():
             self.cuda()
@@ -91,8 +95,12 @@ class BlackbirdDDPG:
         """
         if self.training:
             s_t2 = torch.tensor(s_t2, dtype=torch.float32, device=device).unsqueeze(0)
+            print("here's s_t2: ", s_t2)
             r_t = torch.tensor([r_t], dtype=torch.float32, device=device)
             terminated = torch.tensor([1.0 if terminal else 0.0], dtype=torch.float32, device=device)
+
+            print(f"add_experience() shape of a_t: {self.a_t.shape}")
+
             self.memory.append(self.s_t, self.a_t, r_t, s_t2, terminated)
             self.s_t = s_t2
         else:
@@ -101,8 +109,28 @@ class BlackbirdDDPG:
     def random_action(self):
         lo, hi = -self.action_lim, self.action_lim
         action = (hi-lo)*torch.rand(10) + -50.0
-        self.a_t = action
+        self.a_t = action.unsqueeze(0)
+        print(f"random_action() shape of a_t:{self.a_t.shape}" )
         return action.numpy()
+    
+    def select_action(self, s_t, decay_epsilon=True):
+        """
+        NOTE: this function takes parameter s_t of type torch.Tensor
+        """
+        action = self.actor(s_t)
+        self.a_t = action #save this one for experience replay
+
+        action = action.detach().cpu().numpy()
+
+        #add the noise component to this action
+        action += self.training*max(0, self.epsilon)*self.noise_model.sample() 
+
+        if decay_epsilon:
+            self.epsilon -= self.depsilon
+
+        print(f"select_action() shape of a_t: {self.a_t.shape}")
+        assert torch.is_tensor(self.a_t), "agent's a_t is not set as torch.Tensor"
+        return action.reshape(-1)
 
     def reset(self, state):
          obs = torch.tensor(state, dtype=torch.float32, device=device).unsqueeze(0)

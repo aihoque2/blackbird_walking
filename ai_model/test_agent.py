@@ -13,12 +13,20 @@ agent = BlackbirdDDPG(env, state_size, action_size)
 
 i = 0
 while True:
-    action = agent.random_action()
-    #action = np.zeros(10)
+    if (i < 1000):
+        action = agent.random_action()
+    else:
+        action = agent.select_action(agent.s_t)
+        print(f"got action from select_action(): {action}")
+
     next_state, reward, terminal, _ = env.step(action)
     agent.add_experience(reward, next_state, terminal)
+
     if (terminal):
         print(f"reached a terminal at idx {i}. resetting...")
         env.reset()
         agent.reset(next_state)
+
+    if (len(agent.memory) > 3000):
+        agent.optimize()
     i+=1
