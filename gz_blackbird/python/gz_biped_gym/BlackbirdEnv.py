@@ -80,10 +80,11 @@ class BlackbirdGazebo(gym.Env):
         l_contacted = state[33]
         r_contacted = state[34]
         legs_contacted = l_contacted or r_contacted
-
-        print(f"here's l_contacted: {l_contacted}")
-        print(f"here's r_contacted: {r_contacted}")
-        print()
+        
+        # KEEP THESE. COMMENT/UNCOMMENT ACCORDINGLY
+        # print(f"here's l_contacted: {l_contacted}")
+        # print(f"here's r_contacted: {r_contacted}")
+        # print()
 
         pose_y = state[1]
         pose_z = state[2]
