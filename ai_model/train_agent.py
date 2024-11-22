@@ -5,6 +5,14 @@ import time
 import python.model as models
 from python.agent import BlackbirdDDPG
 
+
+"""
+train_agent.py
+script to run 1 batch
+of training a reinforcement model
+"""
+
+
 env = BlackbirdEnv.BlackbirdGazebo(world_path="world/empty.world", render_mode="human")
 state_size = 35
 action_size = 10
