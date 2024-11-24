@@ -50,7 +50,7 @@ class BlackbirdGazebo(gym.Env):
         self.steps = 0
         
         # hyperparameters
-        self.Y_WEIGHT = -100.0 # negative to reward distance travelled
+        self.Y_WEIGHT = -500.0 # negative to reward distance travelled
         self.POWER_WEIGHT = 0.05 
         self.Z_WEIGHT = 50.0
     

@@ -58,7 +58,6 @@ class BlackbirdDDPG:
 
     def optimize(self):
         # run the optimization step
-        print("agent optimizing....")
 
         # get SARS vector
         s1, a1, r1, s2, terminal = self.memory.sample(self.batch_size)
@@ -102,7 +101,6 @@ class BlackbirdDDPG:
             terminated = torch.tensor([1.0 if terminal else 0.0], dtype=torch.float32, device=device)
             if not self.a_t.is_cuda:
                 self.a_t.to(device)
-            print("action is cuda? ", self.a_t.is_cuda)
             self.memory.append(self.s_t, self.a_t, r_t, s_t2, terminated)
             self.s_t = s_t2
         else:

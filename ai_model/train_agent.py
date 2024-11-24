@@ -34,6 +34,9 @@ for i in tqdm.tqdm(range(num_iters)):
     agent.add_experience(reward, next_state, terminal)
     sum_reward += reward
 
+    if (i%1000 == 0):
+        print(f"reached itereation {i}/10000000")
+
     if (terminal):
         print(f"reached a terminal at idx {i}. resetting...")
         env.reset()
@@ -45,6 +48,7 @@ for i in tqdm.tqdm(range(num_iters)):
     if (i > 3000):
         print("optimization step")
         agent.optimize()
+
     
     # debug
     # if (agent.a_t.is_cuda):
