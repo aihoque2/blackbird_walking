@@ -44,6 +44,11 @@ for i in tqdm.tqdm(range(num_iters)):
 
     if (len(agent.memory) > 3000):
         agent.optimize()
-    i+=1
+    
+    # debug
+    # if (agent.a_t.is_cuda):
+    #     print(f"agent a_t is_cuda at i={i}")
+    #     break
+    # i+=1
 
 agent.save_model()

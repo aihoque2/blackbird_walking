@@ -18,6 +18,7 @@ STATE_SIZE = 35
 AXN_SIZE = 10
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Here's device: ", device)
 
 class BlackbirdDDPG:
     def __init__(self, env, state_size, action_size):
@@ -44,6 +45,8 @@ class BlackbirdDDPG:
         # for SARS vector
         self.s_t = torch.zeros(STATE_SIZE).unsqueeze(0) # get initial states from self.reset(state)
         self.a_t = torch.zeros(AXN_SIZE).unsqueeze(0)
+        self.s_t.to(device)
+        self.a_t.cuda()
         self.training = True
 
         self.noise_model = OrnsteinUhlenbeckProcess(theta=0.15, sigma=0.2, mu=0.0, size=self.action_size, )
@@ -64,7 +67,7 @@ class BlackbirdDDPG:
         a2 = self.actor_tgt.forward(s2)
 
 
-        term_var = torch.tensor([1.0 if not val else 0.0 for val in terminal]).unsqueeze(0)
+        term_var = torch.tensor([1.0 if not val else 0.0 for val in terminal]).unsqueeze(0).to(device)
         y_i = r1 + GAMMA*term_var*torch.squeeze(self.critic_tgt.forward(s2, a2))
         y_predicted = torch.squeeze(self.critic.forward(s1, a1.detach()))
         
@@ -99,7 +102,9 @@ class BlackbirdDDPG:
             s_t2 = torch.tensor(s_t2, dtype=torch.float32, device=device).unsqueeze(0)
             r_t = torch.tensor([r_t], dtype=torch.float32, device=device)
             terminated = torch.tensor([1.0 if terminal else 0.0], dtype=torch.float32, device=device)
-
+            if not self.a_t.is_cuda:
+                self.a_t.to(device)
+            print("action is cuda? ", self.a_t.is_cuda)
             self.memory.append(self.s_t, self.a_t, r_t, s_t2, terminated)
             self.s_t = s_t2
         else:
@@ -107,15 +112,15 @@ class BlackbirdDDPG:
 
     def random_action(self):
         lo, hi = -self.action_lim, self.action_lim
-        action = (hi-lo)*torch.rand(10) + -50.0
+        action = (hi-lo)*torch.rand(10).to(device) + -50.0
         self.a_t = action.unsqueeze(0)
-        return action.numpy()
+        return action.cpu().numpy()
     
     def select_action(self, s_t, decay_epsilon=True):
         """
         NOTE: this function takes parameter s_t of type torch.Tensor
         """
-        action = self.actor(s_t)
+        action = self.actor(s_t).to(device)
         self.a_t = action #save this one for experience replay
 
         action = action.detach().cpu().numpy()

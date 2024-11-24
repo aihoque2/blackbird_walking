@@ -55,7 +55,7 @@ TrainSimulator::TrainSimulator(bool gui, const std::string file_path){
     if (gui){
         // Spawn a new process with the GUI
         gui_ = std::make_unique<boost::process::child>(
-            "gz sim world/empty.world -v 4");
+            "gz sim world/empty.world -v 0");
 
         bool guiServiceExists = false;
         std::unique_ptr<gz::transport::Node> node =  std::make_unique<gz::transport::Node>();
