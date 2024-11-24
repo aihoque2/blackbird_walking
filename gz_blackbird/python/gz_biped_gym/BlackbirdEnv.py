@@ -50,7 +50,7 @@ class BlackbirdGazebo(gym.Env):
         self.steps = 0
         
         # hyperparameters
-        self.Y_WEIGHT = -500.0 # negative to reward distance travelled
+        self.Y_WEIGHT = -5000.0 # negative to reward distance travelled
         self.POWER_WEIGHT = 0.05 
         self.Z_WEIGHT = 50.0
     
@@ -86,8 +86,8 @@ class BlackbirdGazebo(gym.Env):
         # print(f"here's r_contacted: {r_contacted}")
         # print()
 
-        pose_y = state[1]
-        pose_z = state[2]
+        pose_y = state[1] # robot faces the y direction
+        pose_z = state[2] # height of the robot's position
         
         power = 0.0
         for i in range(len(action)):
