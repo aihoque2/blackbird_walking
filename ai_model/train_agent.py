@@ -22,7 +22,7 @@ agent = BlackbirdDDPG(env, state_size, action_size)
 
 sum_reward = 0.0
 num_episodes = 0
-num_iters = int(7e6) # 700 episodes??
+num_iters = int(1e6) # 700 episodes??
 
 for i in tqdm.tqdm(range(num_iters)):
     if (i < 1000):

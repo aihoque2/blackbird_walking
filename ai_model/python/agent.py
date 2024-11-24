@@ -43,10 +43,8 @@ class BlackbirdDDPG:
         hard_update(self.critic_tgt, self.critic)
 
         # for SARS vector
-        self.s_t = torch.zeros(STATE_SIZE).unsqueeze(0) # get initial states from self.reset(state)
-        self.a_t = torch.zeros(AXN_SIZE).unsqueeze(0)
-        self.s_t.to(device)
-        self.a_t.cuda()
+        self.s_t = torch.zeros(STATE_SIZE).unsqueeze(0).to(device) # get initial states from self.reset(state)
+        self.a_t = torch.zeros(AXN_SIZE).unsqueeze(0).to(device)
         self.training = True
 
         self.noise_model = OrnsteinUhlenbeckProcess(theta=0.15, sigma=0.2, mu=0.0, size=self.action_size, )
