@@ -42,7 +42,8 @@ for i in tqdm.tqdm(range(num_iters)):
         sum_reward = 0
         print(f"end of an episode. begin epsiode {num_episodes}")
 
-    if (len(agent.memory) > 3000):
+    if (i > 3000):
+        print("optimization step")
         agent.optimize()
     
     # debug
