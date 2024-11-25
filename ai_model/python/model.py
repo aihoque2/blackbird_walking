@@ -25,7 +25,7 @@ def fanin_init(size, fanin=None):
 
 class Actor(nn.Module):
 	
-	def __init__(self, state_size, action_size, action_lim, hidden1=500, hidden2=400, hidden3=200):
+	def __init__(self, state_size, action_size, action_lim, hidden1=500, hidden2=400, hidden3=300):
 		
 		super(Actor, self).__init__()
 		

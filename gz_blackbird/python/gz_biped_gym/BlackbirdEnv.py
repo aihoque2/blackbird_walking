@@ -50,17 +50,14 @@ class BlackbirdGazebo(gym.Env):
         self.steps = 0
         
         # hyperparameters
-        self.Y_WEIGHT = -5000.0 # negative to reward distance travelled
+        self.Y_WEIGHT = -500.0 # negative to reward distance travelled
         self.POWER_WEIGHT = 0.05 
-        self.Z_WEIGHT = 50.0
+        self.Z_WEIGHT = 70.0
     
     def det_terminal(self):
         """
         determine terminal
         """
-
-        if (self.steps >= 10000):
-            return True
         if (self.sim.is_terminal()):
             return True
         return False
@@ -77,8 +74,9 @@ class BlackbirdGazebo(gym.Env):
         self.sim.step(action)
         state = self.sim.get_state()
 
-        l_contacted = state[33]
-        r_contacted = state[34]
+        torso_contacted = state[32]
+        l_contacted = state[33] # 1.0 if contacted 0.0 otherwise
+        r_contacted = state[34] # 1.0 if contacted 0.0 otherwise
         legs_contacted = l_contacted or r_contacted
         
         # KEEP THESE. COMMENT/UNCOMMENT ACCORDINGLY
@@ -86,7 +84,7 @@ class BlackbirdGazebo(gym.Env):
         # print(f"here's r_contacted: {r_contacted}")
         # print()
 
-        pose_y = state[1] # robot faces the y direction
+        pose_y = state[1] # robot faces the -y direction
         pose_z = state[2] # height of the robot's position
         
         power = 0.0
@@ -94,6 +92,10 @@ class BlackbirdGazebo(gym.Env):
             power += action[i] * state[i+12]
 
         reward = self.Y_WEIGHT*pose_y - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z
+
+        terminal = self.det_terminal()
+        if (terminal):
+            reward -= 10000.0 # terminal_penalty
 
         self.steps += 1
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}

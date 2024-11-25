@@ -34,10 +34,12 @@ class BlackbirdDDPG:
         self.actor = Actor(self.state_size, self.action_size, self.action_lim)
         self.actor_tgt = Actor(self.state_size, self.action_size, self.action_lim)
         self.actor_optim = optim.Adam(self.actor.parameters(), lr=LEARNING_RATE)
+        self.actor_optim.zero_grad()
 
         self.critic = Critic(self.state_size, self.action_size)
         self.critic_tgt = Critic(self.state_size, self.action_size) # used to calculate y_i
         self.critic_optim  = optim.Adam(self.critic.parameters(), lr=LEARNING_RATE)
+        self.critic.zero_grad()
 
         hard_update(self.actor_tgt, self.actor)
         hard_update(self.critic_tgt, self.critic)
