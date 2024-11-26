@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 
-class BlackbirdGazebo(gym.Env):
+class BalanceEnv(gym.Env):
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
 
     def __init__(self,  world_path, render_mode=None):
@@ -50,8 +50,6 @@ class BlackbirdGazebo(gym.Env):
         self.steps = 0
         
         # hyperparameters
-        self.Y_WEIGHT = -500.0 # negative to reward distance travelled
-        self.POWER_WEIGHT = 0.05 
         self.Z_WEIGHT = 70.0
         
         self.x_vel_weight = 100.0
@@ -103,7 +101,7 @@ class BlackbirdGazebo(gym.Env):
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}
 
 if __name__ == '__main__':
-    env = BlackbirdGazebo(render_mode="human")
+    env = BalanceEnv(render_mode="human")
 
     for i in range(10000):
         action = np.random.uniform(low=-50.0, high=50.0, size=(10,))

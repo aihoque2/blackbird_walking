@@ -23,7 +23,7 @@ agent = BlackbirdDDPG(env, state_size, action_size)
 sum_reward = 0.0
 num_episodes = 0
 episode_steps = 0
-num_iters = int(250000) # 700 episodes??
+num_iters = int(100000) # 700 episodes??
 
 state, reward, terminal, _ = env.step([0.0]*10)
 

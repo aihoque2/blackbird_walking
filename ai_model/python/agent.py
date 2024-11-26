@@ -152,8 +152,10 @@ class BlackbirdDDPG:
         """
         save the model
         """
-        actor_script = torch.jit.script(self.actor)
-        actor_script.save('actor_script.pt')
-
+        try:
+            actor_script = torch.jit.script(self.actor)
+            actor_script.save('actor_script.pt')
+        except:
+            print("DDPGAgent.save_model(): Error saving the model:", e)
 
     
