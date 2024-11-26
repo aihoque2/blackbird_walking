@@ -64,8 +64,7 @@ void StateUpdater::PostUpdate(const gz::sim::UpdateInfo &info,
         y = state_[1];
 
         state_[2] = pose.Pos().Z(); 
-        double dz = state_[2] - z;
-        state_[8] = (dz)/dub_dt; // vel_z
+        state_[8] = (state_[2] - z)/dub_dt; // vel_z
         z = state_[2];
         
         // angular coords

@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 
-class BalanceEnv(gym.Env):
+class BalanceBird(gym.Env):
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
 
     def __init__(self,  world_path, render_mode=None):
@@ -50,9 +50,11 @@ class BalanceEnv(gym.Env):
         self.steps = 0
         
         # hyperparameters
-        self.Z_WEIGHT = 70.0
-        
-        self.x_vel_weight = 100.0
+        self.Z_WEIGHT = 50.0
+        self.ROT_WEIGHT = 200.0
+        self.POWER_WEIGHT = 5. 
+        self.SMOOTH_WEIGHT = 20. # joint velocity smoothing
+
     
     def det_terminal(self):
         """
@@ -84,14 +86,17 @@ class BalanceEnv(gym.Env):
         # print(f"here's r_contacted: {r_contacted}")
         # print()
 
-        pose_y = state[1] # robot faces the -y direction
         pose_z = state[2] # height of the robot's position
-        
+
+        roll, pitch, yaw = state[3], state[4], state[5]     
+
         power = 0.0
         for i in range(len(action)):
-            power += action[i] * state[i+12]
+            power += action[i] * state[i+22]
 
-        reward = self.Y_WEIGHT*pose_y - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z
+        reward = -self.ROT_WEIGHT*(roll**2 + pitch**2 + yaw**2)\
+              - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z\
+              #TODO: add self.SMOOTH_WEIGHT
 
         terminal = self.det_terminal()
         if (terminal):
@@ -101,7 +106,7 @@ class BalanceEnv(gym.Env):
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}
 
 if __name__ == '__main__':
-    env = BalanceEnv(render_mode="human")
+    env = BalanceBird(render_mode="human")
 
     for i in range(10000):
         action = np.random.uniform(low=-50.0, high=50.0, size=(10,))

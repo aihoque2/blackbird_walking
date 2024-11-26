@@ -52,8 +52,7 @@ class BlackbirdGazebo(gym.Env):
         # hyperparameters
         self.Y_WEIGHT = -500.0 # negative to reward distance travelled
         self.POWER_WEIGHT = 0.05 
-        self.Z_WEIGHT = 70.0
-        
+        self.Z_WEIGHT = 70.0      
         self.x_vel_weight = 100.0
     
     def det_terminal(self):
@@ -91,7 +90,7 @@ class BlackbirdGazebo(gym.Env):
         
         power = 0.0
         for i in range(len(action)):
-            power += action[i] * state[i+12]
+            power += action[i] * state[i+22]
 
         reward = self.Y_WEIGHT*pose_y - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z
 
