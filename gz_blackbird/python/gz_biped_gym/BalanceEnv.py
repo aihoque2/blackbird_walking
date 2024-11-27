@@ -21,23 +21,6 @@ class BalanceBird(gym.Env):
             set_gui = False
 
 
-        # # Step 1: Get the absolute path to `blackbird.sdf` using `importlib.resources`
-        # with importlib.resources.path('gz_biped_gym.urdf', 'blackbird.sdf') as sdf_path:
-        #     absolute_sdf_path = str(sdf_path.resolve())  # Ensure it's an absolute path
-
-        # # Get the full path to `empty.world` in `gz_biped_gym.world`
-        # with importlib.resources.path('gz_biped_gym.world', 'empty.world') as temp_world_path:
-        #     self.world_path = temp_world_path
-
-        # package_dir = importlib.resources.files('gz_biped_gym')
-        
-        # os.environ["GZ_SIM_RESOURCE_PATH"] = package_dir.absolute().as_posix()
-
-        # print("package_dir: ", package_dir.absolute().as_posix())
-        # print("current dir: ", os.listdir())
-
-
-
         self.sim = blackbird_rl.TrainSimulator(set_gui, world_path)
         obs_low = np.full(32, -np.inf)  # -inf for each element
         obs_high = np.full(32, np.inf)  # inf for each element
@@ -96,11 +79,11 @@ class BalanceBird(gym.Env):
 
         reward = -self.ROT_WEIGHT*(roll**2 + pitch**2 + yaw**2)\
               - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z\
-              #TODO: add self.SMOOTH_WEIGHT
+              -self.SMOOTH_WEIGHT*sum([state[i] for i in range(22, 32)])
 
         terminal = self.det_terminal()
         if (terminal):
-            reward -= 10000.0 # terminal_penalty
+            reward -= 100000.0 # terminal_penalty
 
         self.steps += 1
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}
