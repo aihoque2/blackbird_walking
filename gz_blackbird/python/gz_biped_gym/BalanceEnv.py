@@ -62,7 +62,7 @@ class BalanceBird(gym.Env):
         torso_contacted = state[32]
         l_contacted = state[33] # 1.0 if contacted 0.0 otherwise
         r_contacted = state[34] # 1.0 if contacted 0.0 otherwise
-        legs_contacted = l_contacted or r_contacted
+        legs_contacted = l_contacted and r_contacted
         
         # KEEP THESE. COMMENT/UNCOMMENT ACCORDINGLY
         # print(f"here's l_contacted: {l_contacted}")

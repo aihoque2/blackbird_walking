@@ -33,7 +33,8 @@ for i in tqdm.tqdm(range(num_iters)):
     else:
         action = agent.select_action(agent.s_t)
 
-    if (episode_steps < 1000 and (not state[33] and not state[34])):
+    # @ beginning of episode, let robot stay still until it "lands"
+    if (episode_steps < 500 and (not state[33] and not state[34])):
         action = np.zeros(10)
 
     state, reward, terminal, _ = env.step(action)

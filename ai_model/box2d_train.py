@@ -9,17 +9,39 @@ of the model
 import gymnasium as gym
 import numpy as np
 import time
+from python.agent import BlackbirdDDPG
 
 env = gym.make("BipedalWalker-v3", render_mode="human")
-i = 0
-while True:
-    #action = np.random.uniform(low=-50.0, high=50.0, size=(10,))
-    action = np.zeros(10)
-    action[2] = 20.0
-    state, reward, terminal, _ = env.step(action)
-    if (terminal):
-        print(f"reached a terminal at idx {i}. resetting...")
-        env.reset()
-    i+=1
-    # time.sleep(.1)
+action_size = env.action_space.shape[0]
+state_size = env.observation_space.shape[0]
+agent = BlackbirdDDPG(env, state_size, action_size)
 
+print("here's action low: ", env.action_space.low)
+
+num_iters = 400000
+episode_steps = 0
+num_episodes = 0
+state, info = env.reset()
+
+for i in range(num_iters):
+    if (i < 1000):
+        action = env.action_space.sample()
+    else:
+        action = agent.select_action(agent.s_t)
+
+    state, reward, terminal, truncated, info = env.step(action)
+    agent.add_experience(reward, state, terminal)
+
+    if (terminal or truncated or episode_steps == 5000):
+        env.reset()
+        episode_steps = 0
+        num_episodes += 1
+
+    i+=1
+    episode_steps += 1
+
+    
+    if (i > 3000):
+        agent.optimize()
+
+agent.save_model()
