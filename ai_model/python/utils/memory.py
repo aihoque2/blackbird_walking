@@ -21,7 +21,6 @@ class ReplayMemory():
         assert torch.is_tensor(next_state), f"param 'next_state' is not of type 'torch.Tensor' \n next_state's type: {type(next_state)}"
         assert torch.is_tensor(done), f"param 'done' is not of type 'torch.Tensor' \n done's type: {type(done)}"
 
-
         self.buffer.append(Experience(state, action, reward, next_state, done))
 
     def sample(self, batch_size):

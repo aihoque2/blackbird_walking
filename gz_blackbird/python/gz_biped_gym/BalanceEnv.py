@@ -43,16 +43,15 @@ class BalanceBird(gym.Env):
         """
         determine terminal
         """
-        if (self.sim.is_terminal()):
-            return True
-        return False
+        return self.sim.is_terminal()
 
     def reset(self):
         self.sim.reset_sim()
         self.steps = 0
         state = self.sim.get_state()
-        info = {"pose": {state[0], state[1], state[2]}}
-        return state, info
+        info = {"pose": {state[0], state[1], state[2]}, 
+                "orientation": {state[3], state[4], state[5]}}
+        return np.array(state, dtype=np.float32), info
 
     def step(self, action):
         
