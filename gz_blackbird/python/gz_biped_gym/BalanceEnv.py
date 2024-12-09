@@ -34,7 +34,7 @@ class BalanceBird(gym.Env):
         
         # hyperparameters
         self.Z_WEIGHT = 50.0
-        self.ROT_WEIGHT = 200.0
+        self.ROT_WEIGHT = 150.0
         self.POWER_WEIGHT = 5. 
         self.SMOOTH_WEIGHT = 20. # joint velocity smoothing
 
@@ -43,14 +43,14 @@ class BalanceBird(gym.Env):
         """
         determine terminal
         """
-        return self.sim.is_terminal()
+        return self.sim.is_terminal() # terminal for now is if robot's chassis contacts the ground
 
     def reset(self):
         self.sim.reset_sim()
         self.steps = 0
         state = self.sim.get_state()
-        info = {"pose": {state[0], state[1], state[2]}, 
-                "orientation": {state[3], state[4], state[5]}}
+        info = {"pose": [state[0], state[1], state[2]], 
+                "orientation": [state[3], state[4], state[5]]}
         return np.array(state, dtype=np.float32), info
 
     def step(self, action):
@@ -82,7 +82,7 @@ class BalanceBird(gym.Env):
 
         terminal = self.det_terminal()
         if (terminal):
-            reward -= 100000.0 # terminal_penalty
+            reward = -100000.0 # terminal_penalty
 
         self.steps += 1
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}
