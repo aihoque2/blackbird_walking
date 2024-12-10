@@ -2,6 +2,7 @@
 #include <gz/common/Console.hh>
 #include <gz/sim/ServerConfig.hh>
 
+#include <gz/sim/Link.hh>
 #include <gz/sim/components/Pose.hh>
 #include <gz/sim/components/Link.hh>
 #include <gz/sim/components/LinearVelocity.hh>

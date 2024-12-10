@@ -5,7 +5,7 @@ implement that header stuff here
 */
 
 StateUpdater::StateUpdater(std::mutex& stateMutex, std::shared_ptr<double[]> state)
-:gz::sim::System(), state_mutex_(stateMutex), state_(state), x(0.0), y(0.0), z(0.0), r(0.0), p(0.0), w(0.0)
+:gz::sim::System(), state_mutex_(stateMutex), state_(state), x(0.0), y(0.0), z(0.05), r(0.0), p(0.0), w(0.0)
 {
 }
 
@@ -46,6 +46,21 @@ void StateUpdater::PostUpdate(const gz::sim::UpdateInfo &info,
                                 const gz::sim::EntityComponentManager &ecm)
 {
     gz::sim::Entity blackbird_ent = ecm.EntityByComponents(gz::sim::components::Name("blackbird"));
+    gz::sim::Entity torso_ent = ecm.EntityByComponents(gz::sim::components::Name("torso"), gz::sim::components::Link());
+
+    if (torso_ent == gz::sim::kNullEntity)
+    {
+        throw std::runtime_error("Torso link entity not found.");
+    } 
+
+    gz::sim::Link torso_link(torso_ent);
+    auto world_pose_opt = torso_link.WorldPose(ecm);
+    if (!world_pose_opt)
+    {
+        throw std::runtime_error("Failed to get WorldPose for the torso link.");
+    }
+    const gz::math::Pose3d &pose = *world_pose_opt;
+    
     int i = 0;
 
     double dub_dt = std::chrono::duration<double>(info.dt).count(); // get the time in seconds
@@ -53,8 +68,6 @@ void StateUpdater::PostUpdate(const gz::sim::UpdateInfo &info,
     if (dub_dt > 0.0){
 
         // first 6 dimensions of state_
-        auto* pose_comp = ecm.Component<gz::sim::components::Pose>(blackbird_ent);
-        auto pose = pose_comp->Data();
         state_[0] = pose.Pos().X();
         state_[6] = (state_[0] - x)/dub_dt; // velx
         x = state_[0]; // update to new state

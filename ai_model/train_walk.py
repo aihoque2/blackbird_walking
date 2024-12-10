@@ -44,7 +44,7 @@ for i in tqdm.tqdm(range(num_iters)):
     if (i%1000 == 0):
         print(f"reached itereation {i}/{num_iters}")
 
-    if (terminal or episode_steps >= 10000):
+    if (terminal or episode_steps >= 2000):
         print(f"reached a terminal at idx {i}.\ncumulative reward:{sum_reward} \nresetting...")
         env.reset()
         agent.reset(state)

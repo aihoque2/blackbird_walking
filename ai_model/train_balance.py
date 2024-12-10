@@ -24,7 +24,7 @@ env = BalanceEnv.BalanceBird(world_path="world/empty.world", render_mode="human"
 
 action_size = 10
 state_size = 35
-agent = BlackbirdDDPG(env, state_size, action_size, 1.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
+agent = BlackbirdDDPG(env, state_size, action_size, 50.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
 # agent.load_weights('models')
 
 num_iters = 250000
