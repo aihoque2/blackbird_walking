@@ -20,14 +20,15 @@ num_iters = 400000
 episode_steps = 0
 num_episodes = 0
 state, info = env.reset()
-
+i=0
 agent.load_weights("models")
 
 while True:
     
     action = agent.select_action(agent.s_t)
-    
-    if (terminal or truncated or episode_steps == 1000):
+    state, reward, terminal, truncated, info = env.step(action)
+
+    if (terminal or truncated or episode_steps == 5000):
         env.reset()
         agent.reset(state)
         episode_steps = 0
@@ -35,7 +36,3 @@ while True:
 
     i+=1
     episode_steps += 1
-
-    
-    if (i > 200):
-        agent.optimize()

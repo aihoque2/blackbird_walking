@@ -33,9 +33,9 @@ class BalanceBird(gym.Env):
         self.steps = 0
         
         # hyperparameters
-        self.Z_WEIGHT = 50.0
-        self.ROT_WEIGHT = 150.0
-        self.POWER_WEIGHT = 5. 
+        self.Z_WEIGHT = 80.0
+        self.ROT_WEIGHT = 200.0
+        self.POWER_WEIGHT = 0.05 
         self.SMOOTH_WEIGHT = 20. # joint velocity smoothing
 
     
@@ -76,7 +76,7 @@ class BalanceBird(gym.Env):
         for i in range(len(action)):
             power += action[i] * state[i+22]
 
-        reward = -self.ROT_WEIGHT*(roll**2 + pitch**2 + yaw**2)\
+        reward = -self.ROT_WEIGHT*(np.abs(roll) + np.abs(pitch) + np.abs(yaw))\
               - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z\
               -self.SMOOTH_WEIGHT*sum([state[i] for i in range(22, 32)])
 

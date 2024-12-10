@@ -62,7 +62,7 @@
     </model>
 
   <model name='blackbird'>
-      <pose>0 0.0 0.0 0 0 0</pose>
+      <pose>0 0.0 0.05 0 0 0</pose>
       <include>
         <uri>model://urdf/blackbird.sdf</uri>
       </include>    

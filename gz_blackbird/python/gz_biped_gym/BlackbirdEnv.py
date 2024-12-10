@@ -49,11 +49,11 @@ class BlackbirdGazebo(gym.Env):
         self.action_space = spaces.Box(low=axn_low, high=axn_hi, dtype=np.float64)
         self.steps = 0
         
-        # reward function weights
-        self.Y_WEIGHT = -400.0 # negative to reward distance travelled
+        # hyperparameters
+        self.Y_WEIGHT = -500.0 # negative to reward distance travelled
         self.POWER_WEIGHT = 0.05 
         self.Z_WEIGHT = 70.0      
-        self.x_vel_weight = 250.0
+        self.x_vel_weight = 100.0
     
     def det_terminal(self):
         """
@@ -87,27 +87,22 @@ class BlackbirdGazebo(gym.Env):
 
         pose_y = state[1] # robot faces the -y direction
         pose_z = state[2] # height of the robot's position
-
-        vel_x = np.abs(state[6])
         
         power = 0.0
         for i in range(len(action)):
             power += action[i] * state[i+22]
 
-        reward = self.Y_WEIGHT*pose_y \
-                - self.POWER_WEIGHT*power \
-                + legs_contacted*self.Z_WEIGHT*pose_z \
-                - self.x_vel_weight*vel_x
+        reward = self.Y_WEIGHT*pose_y - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z
 
         terminal = self.det_terminal()
         if (terminal):
-            reward -= 10000.0 # terminal_penalty
+            reward = 10000.0 # terminal_penalty
 
         self.steps += 1
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}
 
 if __name__ == '__main__':
-    env = BlackbirdGazebo(world_path="world/empty.world", render_mode="human")
+    env = BlackbirdGazebo(render_mode="human")
 
     for i in range(10000):
         action = np.random.uniform(low=-50.0, high=50.0, size=(10,))
