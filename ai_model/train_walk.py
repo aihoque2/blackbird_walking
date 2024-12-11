@@ -68,5 +68,5 @@ for i in tqdm.tqdm(range(num_iters)):
     #     break
     episode_steps += 1
 
-agent.save_model()
+agent.save_model("models")
 print ("training complete!")

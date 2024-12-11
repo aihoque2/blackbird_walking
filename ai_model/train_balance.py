@@ -62,4 +62,4 @@ for _ in tqdm.tqdm(range(num_iters)):
     episode_steps += 1
 
 agent.save_model("models")
-    # time.sleep(.1)
+    time.sleep(.01)

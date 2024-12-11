@@ -1,0 +1,31 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 1000  # Hz
+
+    effort_controller:
+      type: effort_controllers/JointGroupEffortController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+effort_controller:
+  ros__parameters:
+    joints:
+      - l_hip_roll
+      - l_hip_yaw
+      - l_hip_pitch
+      - l_knee
+      - l_ankle
+      - r_hip_roll
+      - r_hip_yaw
+      - r_hip_pitch
+      - r_knee
+      - r_ankle
+
+    command_interfaces:
+      - effort
+      
+    state_interfaces:
+      - position
+      - velocity
+      - effort

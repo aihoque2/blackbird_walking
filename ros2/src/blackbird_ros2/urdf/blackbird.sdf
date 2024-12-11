@@ -1,0 +1,792 @@
+
+<sdf version='1.7'>
+  <model name='blackbird'>
+    <material
+      name="teal">
+      <color
+        rgba="0.184313 0.92157 0.92157 1" />
+    </material>
+    <link name='torso'>
+      <pose relative_to='__model__'>0 0 1 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.09385 0.03683 0 -0 0</pose>
+        <mass>4.4</mass>
+        <inertia>
+          <ixx>0.00838</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00298</iyy>
+          <iyz>0</iyz>
+          <izz>0.0088</izz>
+        </inertia>
+      </inertial>
+      <collision name='torso_fixed_joint_lump__mesh.001_collision'>
+        <pose>0 -0.0275 0.0175 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.16028 0.33 0.145</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </collision>
+      <collision name='torso_fixed_joint_lump__mesh.002_collision_1'>
+        <pose>0.15 0.10367 -0.00044 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0759</length>
+            <radius>0.055</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </collision>
+      <collision name='torso_fixed_joint_lump__mesh.003_collision_2'>
+        <pose>-0.15 0.10367 -0.00044 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0759</length>
+            <radius>0.055</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </collision>
+      <visual name='torso_fixed_joint_lump__mesh.001_visual'>
+        <pose>0 -0.09385 0.03683 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_001.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='torso_fixed_joint_lump__mesh.013_visual_1'>
+        <pose>-1e-05 0.10381 0.00587 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_016.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='torso_fixed_joint_lump__mesh.014_visual_2'>
+        <pose>0 -0.071 0.005 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_017.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='l_hip_roll' type='revolute'>
+      <pose relative_to='torso'>0.15 0 0 0 -0 0</pose>
+      <parent>torso</parent>
+      <child>l_ab_ad</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l_ab_ad'>
+      <pose relative_to='l_hip_roll'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>8e-05 0.02446 -0.00146 0 -0 0</pose>
+        <mass>1.2</mass>
+        <inertia>
+          <ixx>0.00196</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00133</iyy>
+          <iyz>-2e-05</iyz>
+          <izz>0.0023</izz>
+        </inertia>
+      </inertial>
+      <collision name='l_ab_ad_fixed_joint_lump__mesh.002_collision'>
+        <pose>0 0.00015 -0.00044 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0759</length>
+            <radius>0.055</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='l_ab_ad_fixed_joint_lump__mesh.002_visual'>
+        <pose>8e-05 0.02446 -0.00146 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_003.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+        </visual>
+    </link>
+    <joint name='l_hip_yaw' type='revolute'>
+      <pose relative_to='l_ab_ad'>0 0 -0.1295 0 -0 0</pose>
+      <parent>l_ab_ad</parent>
+      <child>l_yaw</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l_yaw'>
+      <pose relative_to='l_hip_yaw'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.03518 0 -0 0</pose>
+        <mass>2.4</mass>
+        <inertia>
+          <ixx>0.00566</ixx>
+          <ixy>0</ixy>
+          <ixz>4e-05</ixz>
+          <iyy>0.01138</iyy>
+          <iyz>0</iyz>
+          <izz>0.00912</izz>
+        </inertia>
+      </inertial>
+      <collision name='l_yaw_fixed_joint_lump__mesh.004_collision'>
+        <pose>0 0 0.00075 1.5708 -0 1.5708</pose>
+        <geometry>
+          <cylinder>
+            <length>0.209</length>
+            <radius>0.0525</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='l_yaw_fixed_joint_lump__mesh.004_visual'>
+        <pose>0 0 0.03518 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_005.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='l_hip_pitch' type='revolute'>
+      <pose relative_to='l_yaw'>0 0 0 0 -0 0</pose>
+      <parent>l_yaw</parent>
+      <child>l_upper</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.91986</lower>
+          <upper>1.22173</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l_upper'>
+      <pose relative_to='l_hip_pitch'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.00043 0.04822 -0.10773 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.04548</ixx>
+          <ixy>-0.00012</ixy>
+          <ixz>5e-05</ixz>
+          <iyy>0.0388</iyy>
+          <iyz>0.01517</iyz>
+          <izz>0.00738</izz>
+        </inertia>
+      </inertial>
+      <visual name='l_upper_fixed_joint_lump__mesh.010_visual'>
+        <pose>0.00043 0.04822 -0.10773 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_013.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='l_knee' type='revolute'>
+      <pose relative_to='l_upper'>0 0.1529 -0.42302 0 -0 0</pose>
+      <parent>l_upper</parent>
+      <child>l_lower</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-2.0944</lower>
+          <upper>0.34907</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l_lower'>
+      <pose relative_to='l_knee'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.0001 0.00125 -0.14482 0 -0 0</pose>
+        <mass>2</mass>
+        <inertia>
+          <ixx>0.04215</ixx>
+          <ixy>-0.0001</ixy>
+          <ixz>-5e-05</ixz>
+          <iyy>0.03449</iyy>
+          <iyz>-0.01473</iyz>
+          <izz>0.00811</izz>
+        </inertia>
+      </inertial>
+      <collision name='l_lower_fixed_joint_lump__mesh.011_collision'>
+        <pose>0.028 0.03693 -0.07688 1.5708 -0 1.5708</pose>
+        <geometry>
+          <cylinder>
+            <length>0.088</length>
+            <radius>0.055</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='l_lower_fixed_joint_lump__mesh.008_visual'>
+        <pose>-0.0001 0.00125 -0.14482 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_011.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='l_lower_fixed_joint_lump__mesh.011_visual_1'>
+        <pose>0.05162 0.03693 -0.07685 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_014.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+    </link>
+    <joint name='l_ankle' type='revolute'>
+      <pose relative_to='l_lower'>0 -0.1529 -0.42302 0 -0 0</pose>
+      <parent>l_lower</parent>
+      <child>l_foot</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>0.69813</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l_foot'>
+      <pose relative_to='l_ankle'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.00325 -0.02828 0 -0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.00163</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.001</iyy>
+          <iyz>-5e-05</iyz>
+          <izz>0.00151</izz>
+        </inertia>
+      </inertial>
+      <collision name='l_foot_fixed_joint_lump__Sphere_collision'>
+        <pose>0 -0.09 -0.04 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.025</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <collision name='l_foot_fixed_joint_lump__Sphere.002_collision_1'>
+        <pose>0 0.09 -0.04 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.025</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name='l_foot_fixed_joint_lump__Cylinder_visual'>
+        <pose>0 -0.07 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.04</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='l_foot_fixed_joint_lump__Cylinder.001_visual_1'>
+        <pose>0 0.07 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.04</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='l_foot_fixed_joint_lump__Sphere_visual_2'>
+        <pose>0 -0.09 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='l_foot_fixed_joint_lump__Sphere.001_visual_3'>
+        <pose>0 -0.05 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='l_foot_fixed_joint_lump__Sphere.002_visual_4'>
+        <pose>0 0.09 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='l_foot_fixed_joint_lump__Sphere.003_visual_5'>
+        <pose>0 0.05 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='l_foot_fixed_joint_lump__mesh.009_visual_6'>
+        <pose>0 0.00325 -0.02828 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_012.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='r_hip_roll' type='revolute'>
+      <pose relative_to='torso'>-0.15 0 0 0 -0 0</pose>
+      <parent>torso</parent>
+      <child>r_ab_ad</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r_ab_ad'>
+      <pose relative_to='r_hip_roll'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-8e-05 0.02445 -0.00143 0 -0 0</pose>
+        <mass>1.2</mass>
+        <inertia>
+          <ixx>0.00196</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00133</iyy>
+          <iyz>-2e-05</iyz>
+          <izz>0.00229</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_ab_ad_fixed_joint_lump__mesh.003_collision'>
+        <pose>0 0.00015 -0.00044 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0759</length>
+            <radius>0.055</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='r_ab_ad_fixed_joint_lump__mesh.003_visual'>
+        <pose>-8e-05 0.02445 -0.00143 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_004.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='r_hip_yaw' type='revolute'>
+      <pose relative_to='r_ab_ad'>0 0 -0.1295 0 -0 0</pose>
+      <parent>r_ab_ad</parent>
+      <child>r_yaw</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r_yaw'>
+      <pose relative_to='r_hip_yaw'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.03517 0 -0 0</pose>
+        <mass>2.4</mass>
+        <inertia>
+          <ixx>0.00565</ixx>
+          <ixy>0</ixy>
+          <ixz>-4e-05</ixz>
+          <iyy>0.01138</iyy>
+          <iyz>0</iyz>
+          <izz>0.00912</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_yaw_fixed_joint_lump__mesh.005_collision'>
+        <pose>0 0 0.00075 1.5708 -0 1.5708</pose>
+        <geometry>
+          <cylinder>
+            <length>0.209</length>
+            <radius>0.0525</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='r_yaw_fixed_joint_lump__mesh.005_visual'>
+        <pose>0 0 0.03517 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_006.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='r_hip_pitch' type='revolute'>
+      <pose relative_to='r_yaw'>0 0 0 0 -0 0</pose>
+      <parent>r_yaw</parent>
+      <child>r_upper</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.91986</lower>
+          <upper>1.22173</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r_upper'>
+      <pose relative_to='r_hip_pitch'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.00228 0.0512 -0.11337 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.04446</ixx>
+          <ixy>0.00018</ixy>
+          <ixz>-7e-05</ixz>
+          <iyy>0.03796</iyy>
+          <iyz>0.0148</iyz>
+          <izz>0.00723</izz>
+        </inertia>
+      </inertial>
+      <visual name='r_upper_fixed_joint_lump__mesh.006_visual'>
+        <pose>-0.00228 0.0512 -0.11337 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_009.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='r_knee' type='revolute'>
+      <pose relative_to='r_upper'>0 0.1529 -0.42302 0 -0 0</pose>
+      <parent>r_upper</parent>
+      <child>r_lower</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-2.0944</lower>
+          <upper>0.34907</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r_lower'>
+      <pose relative_to='r_knee'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.00018 0.00049 -0.14674 0 -0 0</pose>
+        <mass>2</mass>
+        <inertia>
+          <ixx>0.04173</ixx>
+          <ixy>0.00012</ixy>
+          <ixz>6e-05</ixz>
+          <iyy>0.03413</iyy>
+          <iyz>-0.01457</iyz>
+          <izz>0.00804</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_lower_fixed_joint_lump__mesh.012_collision'>
+        <pose>-0.028 0.03693 -0.07688 1.5708 -0 1.5708</pose>
+        <geometry>
+          <cylinder>
+            <length>0.088</length>
+            <radius>0.055</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='r_lower_fixed_joint_lump__mesh.007_visual'>
+        <pose>-0.00018 0.00049 -0.14674 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_010.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='r_lower_fixed_joint_lump__mesh.012_visual_1'>
+        <pose>-0.05162 0.03692 -0.07686 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27_015.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+    <joint name='r_ankle' type='revolute'>
+      <pose relative_to='r_lower'>0 -0.1529 -0.42302 0 -0 0</pose>
+      <parent>r_lower</parent>
+      <child>r_foot</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>0.69813</upper>
+          <effort>50</effort>
+          <velocity>20</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='r_foot'>
+      <pose relative_to='r_ankle'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.00325 -0.02828 0 -0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.00163</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.001</iyy>
+          <iyz>-5e-05</iyz>
+          <izz>0.00151</izz>
+        </inertia>
+      </inertial>
+      <collision name='r_foot_fixed_joint_lump__Sphere.005_collision'>
+        <pose>0 0.09 -0.04 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.025</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <collision name='r_foot_fixed_joint_lump__Sphere.007_collision_1'>
+        <pose>0 -0.09 -0.04 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.025</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name='r_foot_fixed_joint_lump__Cylinder.002_visual'>
+        <pose>0 0.07 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.04</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='r_foot_fixed_joint_lump__Cylinder.003_visual_1'>
+        <pose>0 -0.07 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.04</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='r_foot_fixed_joint_lump__Sphere.004_visual_2'>
+        <pose>0 0.05 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='r_foot_fixed_joint_lump__Sphere.005_visual_3'>
+        <pose>0 0.09 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='r_foot_fixed_joint_lump__Sphere.006_visual_4'>
+        <pose>0 -0.05 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='r_foot_fixed_joint_lump__Sphere.007_visual_5'>
+        <pose>0 -0.09 -0.05247 1.5708 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.01</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+      <visual name='r_foot_fixed_joint_lump__mesh_visual_6'>
+        <pose>0 0.00325 -0.02828 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>file://meshes/blackbird/Assembly_Mockup_v27.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.184313 0.92157 0.92157 1</ambient> <!-- RGB and alpha channel -->
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
