@@ -5,7 +5,7 @@ implement that header stuff here
 */
 
 StateUpdater::StateUpdater(std::mutex& stateMutex, std::shared_ptr<double[]> state)
-:gz::sim::System(), state_mutex_(stateMutex), state_(state), x(0.0), y(0.0), z(0.05), r(0.0), p(0.0), w(0.0)
+:gz::sim::System(), state_mutex_(stateMutex), state_(state), x(0.0), y(0.0), z(0.00), r(0.0), p(0.0), w(0.0)
 {
 }
 
@@ -141,6 +141,15 @@ void StateUpdater::Reset(const gz::sim::UpdateInfo &info,
     if (!ecm.EntityHasComponentType(blackbird_ent, gz::sim::components::AngularVelocity().TypeId())){
         ecm.CreateComponent(blackbird_ent, gz::sim::components::AngularVelocity(zero_vel));
     }
+
+
+    // reset our state
+    for (int i = 6; i < 32; i++){
+        state_[i] = 0.0; // velocities, joint pos, joint vels are all set to 0.0
+    }
+    
+    /*set z to its initial position*/
+    state_[2] = 1.0; // TODO: see if we can get initial z value from configure()
 
     for (auto joint_name: JOINT_NAMES){
         gz::sim::Entity joint_ent = ecm.EntityByComponents(gz::sim::components::Joint(), gz::sim::components::Name(joint_name));

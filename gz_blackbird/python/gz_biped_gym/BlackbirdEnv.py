@@ -88,11 +88,16 @@ class BlackbirdGazebo(gym.Env):
         pose_y = state[1] # robot faces the -y direction
         pose_z = state[2] # height of the robot's position
         
+        vel_x = np.abs(state[6])
+
         power = 0.0
         for i in range(len(action)):
             power += action[i] * state[i+22]
 
-        reward = self.Y_WEIGHT*pose_y - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z
+        reward = self.Y_WEIGHT*pose_y \
+                - self.POWER_WEIGHT*power \
+                - self.x_vel_weight*vel_x
+                #+ legs_contacted*self.Z_WEIGHT*pose_z \
 
         terminal = self.det_terminal()
         if (terminal):

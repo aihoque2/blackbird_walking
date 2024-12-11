@@ -12,23 +12,24 @@ train_agent.py
 script to run 1 batch
 of training a reinforcement model
 """
-
+ACTOR_RATE = 0.0001
+CRITIC_RATE = 0.001
 
 env = BlackbirdEnv.BlackbirdGazebo(world_path="world/empty.world", render_mode="human")
 state_size = 35
 action_size = 10
 
-agent = BlackbirdDDPG(env, state_size, action_size)
+agent = BlackbirdDDPG(env, state_size, action_size, 50.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
 
 sum_reward = 0.0
 num_episodes = 0
 episode_steps = 0
-num_iters = int(100000) # 700 episodes??
+num_iters = int(400000) # 700 episodes??
 
 state, reward, terminal, _ = env.step([0.0]*10)
 
 for i in tqdm.tqdm(range(num_iters)):
-    if (i < 1000):
+    if (i < 3000):
         action = agent.random_action()
     else:
         action = agent.select_action(agent.s_t)

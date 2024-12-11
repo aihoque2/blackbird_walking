@@ -47,7 +47,7 @@ for _ in tqdm.tqdm(range(num_iters)):
 
     agent.add_experience(reward, state, terminal)
 
-    if (terminal or episode_steps == 10000):
+    if (terminal or episode_steps == 3000):
         print(f"reached a terminal at idx {i}. resetting...")
         reward_str = f"reward at episode {num_episodes}: {sum_reward}"
         env.reset()
