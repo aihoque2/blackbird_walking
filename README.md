@@ -7,7 +7,7 @@ this project is dedicated to creating a reinforcement learning environment (see:
 see the separate directory descriptions below:
 
 ### gz_blackbird
-This is the training environmenet developed with Gazebo Harmonic.
+This is the training environment developed with Gazebo Harmonic.
 Written in C++, it features a python API for the gym enviornments. Please see `BalanceEnv.py` for a static balance environment, and `BlackbirdEnv.py` for the walking environment.
 
 

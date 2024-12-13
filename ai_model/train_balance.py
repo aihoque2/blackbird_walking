@@ -27,7 +27,7 @@ state_size = 35
 agent = BlackbirdDDPG(env, state_size, action_size, 50.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
 # agent.load_weights('models')
 
-num_iters = 250000
+num_iters = 500000
 episode_steps = 0
 num_episodes = 0
 sum_reward = 0.0
@@ -62,4 +62,3 @@ for _ in tqdm.tqdm(range(num_iters)):
     episode_steps += 1
 
 agent.save_model("models")
-    time.sleep(.01)
