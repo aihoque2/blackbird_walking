@@ -101,7 +101,7 @@ class BlackbirdGazebo(gym.Env):
 
         terminal = self.det_terminal()
         if (terminal):
-            reward = 10000.0 # terminal_penalty
+            reward = -10000.0 # terminal_penalty
 
         self.steps += 1
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}

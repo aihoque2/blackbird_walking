@@ -69,7 +69,7 @@ class BalanceBird(gym.Env):
         # print()
 
         pose_z = state[2] # height of the robot's position
-        valid_height = (0.40 <= pose_z <= 1.05)
+        valid_height = (0.50 <= pose_z <= 1.05)
 
         roll, pitch, yaw = state[3], state[4], state[5]     
 
