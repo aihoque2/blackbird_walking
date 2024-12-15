@@ -21,11 +21,34 @@ void StateUpdater::Configure(const gz::sim::Entity& entity,
     // read the github code and see what's
     // needed to be done here.
 
-    gz::sim::Entity blackbird_ent = ecm.EntityByComponents(gz::sim::components::Name("blackbird"));
-    auto* pose_comp = ecm.Component<gz::sim::components::Pose>(blackbird_ent);
-    if (pose_comp == nullptr){
-        throw std::runtime_error("StateUpdater::Configure() Pose component returned nullptr");
+    gz::sim::Entity torso_ent = ecm.EntityByComponents(gz::sim::components::Name("torso"), gz::sim::components::Link());
+
+    if (torso_ent == gz::sim::kNullEntity)
+    {
+        throw std::runtime_error("StateUpdater::Configure() Torso link entity not found.");
+    } 
+
+    gz::sim::Link torso_link(torso_ent);
+    auto world_pose_opt = torso_link.WorldPose(ecm);
+    if (!world_pose_opt)
+    {
+        throw std::runtime_error("StateUpdater::Configure() Failed to get WorldPose for the torso link.");
     }
+    const gz::math::Pose3d &initial_pose = *world_pose_opt;
+    x = initial_pose.Pos().X();
+    y = initial_pose.Pos().Y();
+    z = initial_pose.Pos().Z();
+    r = initial_pose.Rot().Roll();
+    p = initial_pose.Rot().Pitch();
+    w = initial_pose.Rot().Yaw();
+
+    state_[0] = x;
+    state_[1] = y;
+    state_[2] = z;
+    state_[3] = r;
+    state_[4] = p;
+    state_[5] = w;
+
 
     for (auto joint_name: JOINT_NAMES){
         gz::sim::Entity joint_ent = ecm.EntityByComponents(gz::sim::components::Joint(), gz::sim::components::Name(joint_name));
@@ -40,8 +63,17 @@ void StateUpdater::Configure(const gz::sim::Entity& entity,
         }
     }
     
+    /*
+    linear an angular velocities 
+    cover indicies 6-11.
+    */
+    int i = 6;
+    for (; i < 12; i++){
+        state_[i] = 0.0;
+    }
+
     // Joint position states and vels
-    int i = 12;
+    i = 12;
     for (auto joint_name: JOINT_NAMES){
         gz::sim::Entity joint_ent = ecm.EntityByComponents(gz::sim::components::Joint(), gz::sim::components::Name(joint_name));
         auto* j_pos = ecm.Component<gz::sim::components::JointPosition>(joint_ent);
@@ -121,10 +153,7 @@ void StateUpdater::PostUpdate(const gz::sim::UpdateInfo &info,
         state_[11] = (state_[5] - w)/dub_dt;
         w = state_[5];
     }
-    /*
-    linear an angular velocities 
-    cover indicies 6-11.
-    */
+
 
 
     // Joint position states and vels
@@ -152,32 +181,42 @@ void StateUpdater::PostUpdate(const gz::sim::UpdateInfo &info,
 void StateUpdater::Reset(const gz::sim::UpdateInfo &info,
                  gz::sim::EntityComponentManager &ecm)
 {
-    gz::sim::Entity blackbird_ent = ecm.EntityByComponents(gz::sim::components::Name("blackbird"));
-    auto* pose_comp = ecm.Component<gz::sim::components::Pose>(blackbird_ent);
-    if (pose_comp == nullptr){
-        throw std::runtime_error("StateUpdater::Reset() Pose component returned nullptr");
+    gz::sim::Entity torso_ent = ecm.EntityByComponents(gz::sim::components::Name("torso"), gz::sim::components::Link());
+
+    if (torso_ent == gz::sim::kNullEntity)
+    {
+        throw std::runtime_error("Torso link entity not found.");
+    } 
+
+    gz::sim::Link torso_link(torso_ent);
+    auto world_pose_opt = torso_link.WorldPose(ecm);
+    if (!world_pose_opt)
+    {
+        throw std::runtime_error("StateUpdater::Reset() Failed to get WorldPose for the torso link.");
     }
+    const gz::math::Pose3d &initial_pose = *world_pose_opt;
+    x = initial_pose.Pos().X();
+    y = initial_pose.Pos().Y();
+    z = initial_pose.Pos().Z();
+    r = initial_pose.Rot().Roll();
+    p = initial_pose.Rot().Pitch();
+    w = initial_pose.Rot().Yaw();
+
+    state_[0] = x;
+    state_[1] = y;
+    state_[2] = z;
+    state_[3] = r;
+    state_[4] = p;
+    state_[5] = w;
 
     gz::math::Vector3d zero_vel(0, 0, 0);
-
-    // linear velocity check
-    if (!ecm.EntityHasComponentType(blackbird_ent, gz::sim::components::LinearVelocity().TypeId())){
-        ecm.CreateComponent(blackbird_ent, gz::sim::components::LinearVelocity(zero_vel));
-    }
-
-    // angular velocity check
-    if (!ecm.EntityHasComponentType(blackbird_ent, gz::sim::components::AngularVelocity().TypeId())){
-        ecm.CreateComponent(blackbird_ent, gz::sim::components::AngularVelocity(zero_vel));
-    }
-
-
-    // reset our state
-    for (int i = 6; i < 32; i++){
+    
+    // set linear and angular velocities to zero
+    int i = 6;
+    for (; i < 12; i++){
         state_[i] = 0.0; // velocities, joint pos, joint vels are all set to 0.0
     }
     
-    /*set z to its initial position*/
-    state_[2] = 1.0; // TODO: see if we can get initial z value from configure()
 
     for (auto joint_name: JOINT_NAMES){
         gz::sim::Entity joint_ent = ecm.EntityByComponents(gz::sim::components::Joint(), gz::sim::components::Name(joint_name));
@@ -191,22 +230,8 @@ void StateUpdater::Reset(const gz::sim::UpdateInfo &info,
             ecm.CreateComponent(joint_ent, gz::sim::components::JointVelocity({0.0}));
         }
     }
-    x = 0.0;
-    y = 0.0;
-    z = 1.0;
-    r = 0.0;
-    p = 0.0;
-    w = 0.0;
 
-    state_[2] = 1.0;
-    int i = 0;
-    for (; i < 12; i++){
-        if (i != 2){
-            state_[i] = 0.0;
-        }
-    }
-    
-    // Joint position states and vels
+    // set Joint position states and vels
     i = 12;
     for (auto joint_name: JOINT_NAMES){
         gz::sim::Entity joint_ent = ecm.EntityByComponents(gz::sim::components::Joint(), gz::sim::components::Name(joint_name));

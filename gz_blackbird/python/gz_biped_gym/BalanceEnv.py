@@ -69,6 +69,7 @@ class BalanceBird(gym.Env):
         # print()
 
         pose_z = state[2] # height of the robot's position
+        valid_height = (0.40 <= pose_z <= 1.05)
 
         roll, pitch, yaw = state[3], state[4], state[5]     
 
@@ -77,7 +78,7 @@ class BalanceBird(gym.Env):
             power += action[i] * state[i+22]
 
         reward = -self.ROT_WEIGHT*(np.abs(roll) + np.abs(pitch) + np.abs(yaw))\
-              - self.POWER_WEIGHT*power + legs_contacted*self.Z_WEIGHT*pose_z\
+              - self.POWER_WEIGHT*power + legs_contacted*valid_height*self.Z_WEIGHT*pose_z\
               -self.SMOOTH_WEIGHT*sum([state[i] for i in range(22, 32)])
 
         terminal = self.det_terminal()
