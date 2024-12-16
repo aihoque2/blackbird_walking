@@ -11,6 +11,8 @@ from python.agent import BlackbirdDDPG
 train_agent.py
 script to run 1 batch
 of training a reinforcement model
+
+transfer learning from a balance model
 """
 ACTOR_RATE = 0.0001
 CRITIC_RATE = 0.001
@@ -19,17 +21,18 @@ env = BlackbirdEnv.BlackbirdGazebo(world_path="world/empty.world", render_mode="
 state_size = 35
 action_size = 10
 
-agent = BlackbirdDDPG(env, state_size, action_size, 50.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
+agent = BlackbirdDDPG(env, state_size, action_size, 10.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
+agent.load_weights("models")
 
 sum_reward = 0.0
 num_episodes = 0
 episode_steps = 0
-num_iters = int(400000) # 700 episodes??
+num_iters = int(700000) # 700 episodes??
 
 state, reward, terminal, _ = env.step([0.0]*10)
 
 for i in tqdm.tqdm(range(num_iters)):
-    if (i < 3000):
+    if (i < 1000):
         action = agent.random_action()
     else:
         action = agent.select_action(agent.s_t)
@@ -43,9 +46,9 @@ for i in tqdm.tqdm(range(num_iters)):
     sum_reward += reward
 
     if (i%1000 == 0):
-        print(f"reached itereation {i}/{num_iters}")
+        print(f"reached iteration {i}/{num_iters}")
 
-    if (terminal or episode_steps >= 2000):
+    if (terminal or episode_steps >= 2500):
         print(f"reached a terminal at idx {i}.\ncumulative reward:{sum_reward} \nresetting...")
         env.reset()
         agent.reset(state)
@@ -54,7 +57,7 @@ for i in tqdm.tqdm(range(num_iters)):
         sum_reward = 0
         print(f"\n end of an episode. begin epsiode {num_episodes}")
 
-    if (i > 3000):
+    if (i > 1000):
         print("optimization step")
         agent.optimize()
 
@@ -68,5 +71,5 @@ for i in tqdm.tqdm(range(num_iters)):
     #     break
     episode_steps += 1
 
-agent.save_model("models")
+agent.save_model("walk_models")
 print ("training complete!")
