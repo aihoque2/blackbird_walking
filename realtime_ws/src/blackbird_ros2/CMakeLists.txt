@@ -27,22 +27,23 @@ install(DIRECTORY
   DESTINATION include
 )
 
+###UNCOMMENT THIS BLOCK WHEN READY#########
 # libraries
-add_library(BlackbirdPosePublisher SHARED
-include/PosePublisher.h
-src/PosePublisher.cpp
-)
-
-target_include_directories(BlackbirdPosePublisher PRIVATE include)
-
-ament_target_dependencies(BlackbirdPosePublisher
-  gz-sim8
-  gz-plugin2
-  rclcpp
-  geometry_msgs
-  std_msgs
-)
-
+# add_library(BlackbirdPosePublisher SHARED
+# include/PosePublisher.h
+# src/PosePublisher.cpp
+# )
+#
+# target_include_directories(BlackbirdPosePublisher PRIVATE include)
+#
+# ament_target_dependencies(BlackbirdPosePublisher
+#   gz-sim8
+#   gz-plugin2
+#   rclcpp
+#   geometry_msgs
+#   std_msgs
+# )
+############################################
 #executables
 add_executable(effort_example_cpp src/effort_example.cpp)
 ament_target_dependencies(effort_example_cpp rclcpp std_msgs)
@@ -63,7 +64,7 @@ install(
 
 # C++ install
 install(TARGETS
-  BlackbirdPosePublisher
+  #BlackbirdPosePublisher
   effort_example_cpp
   reverse_effort_cpp
   DESTINATION lib/${PROJECT_NAME}

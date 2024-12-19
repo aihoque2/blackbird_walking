@@ -249,18 +249,24 @@
         </geometry>
         <material name="Material"/>
       </visual>
-      <collision name="Sphere.005">
+      <collision name="r_foot_sphere_005">
         <origin xyz="0 0.09 -0.04" rpy="1.5708 0 0"/>
         <geometry>
           <sphere radius="0.025"/>
         </geometry>
       </collision>
-      <collision name="Sphere.007">
+      <collision name="r_foot_sphere_007">
         <origin xyz="0 -0.09 -0.04" rpy="1.5708 0 0"/>
         <geometry>
           <sphere radius="0.025"/>
         </geometry>
       </collision>
+      <sensor name="r_foot_contact" type='contact'>
+        <contact>
+          <collision>r_foot_sphere_005</collision>
+          <collision>r_foot_sphere_007</collision>
+        </contact>
+      </sensor>
     </link>
 
     <link name="r_lower">
@@ -356,24 +362,35 @@
         </geometry>
         <material name="Material"/>
       </visual>
-      <collision name="mesh.001">
+      <collision name="torso_mesh_001">
         <origin xyz="0 -0.0275 0.0175" rpy="0 0 0"/>
         <geometry>
           <box size="0.16028 0.33 0.145"/>
         </geometry>
       </collision>
-      <collision name="mesh.002">
+      <collision name="torso_mesh_002">
         <origin xyz="0.15 0.10367 -0.00044" rpy="1.5708 0 0"/>
         <geometry>
           <cylinder radius="0.055" length="0.0759"/>
         </geometry>
       </collision>
-      <collision name="mesh.003">
+      <collision name="torso_mesh_003">
         <origin xyz="-0.15 0.10367 -0.00044" rpy="1.5708 0 0"/>
         <geometry>
           <cylinder radius="0.055" length="0.0759"/>
         </geometry>
       </collision>
+
+      <sensor name="torso_contact" type='contact'>
+      <selfCollide>true</selfCollide>
+      <alwaysOn>true</alwaysOn>
+        <contact>
+          <collision>torso_mesh_001</collision>
+          <collision>torso_mesh_002</collision>
+          <collision>torso_mesh_003</collision>
+        </contact>
+      </sensor>
+
     </link>
 
     <joint name="l_hip_roll" type="revolute">

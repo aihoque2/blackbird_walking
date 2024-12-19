@@ -35,7 +35,8 @@ or you won't be able to get the PosePublisher topic
 
 ### PosePublisher
 Extract pose information from the blackbird entity,
-as calculated in the Gazebo simulation.
+as calculated in the Gazebo simulation. it is returned in
+the form of a Float64MultiArray
 
 ![blackbird in gazebo simulation](images/blackbird_gz.png)
 

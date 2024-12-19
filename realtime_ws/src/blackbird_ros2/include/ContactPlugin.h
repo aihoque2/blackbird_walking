@@ -1,4 +1,3 @@
-
 #include <chrono>
 #include <map>
 #include <memory>
@@ -20,17 +19,20 @@
 #include <geometry_msgs/msg/pose.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
 
-#ifndef BLACKBIRDROS2_POSEPUBLISHER_HH_
-#define BLACKBIRDROS2_POSEPUBLISHER_HH_
+
+#ifndef BLACKBIRDROS2_CONTACTPLUGIN_HH_
+#define BLACKBIRDROS2_CONTACTPLUGIN_HH_
+
+auto LINK_NAMES = {"torso", "l_foot", "r_foot"}
 
 namespace blackbird_ros2{
-class BlackbirdPosePublisher : public gz::sim::System,
+class BlackbirdContactPlugin : public gz::sim::System,
                                 public gz::sim::ISystemConfigure, 
                                 public gz::sim::ISystemPostUpdate
 {
     public:
-        BlackbirdPosePublisher();
-        ~BlackbirdPosePublisher();
+        BlackbirdContactPlugin();
+        ~BlackbirdContactPlugin();
 
         void Configure(const gz::sim::Entity& entity,
                        const std::shared_ptr<const sdf::Element>&,
@@ -39,25 +41,9 @@ class BlackbirdPosePublisher : public gz::sim::System,
         
         void PostUpdate(const gz::sim::UpdateInfo &_info,
                                 const gz::sim::EntityComponentManager &ecm);
-        
-        void UpdatePoses(const gz::sim::EntityComponentManager &ecm);
-        vector<bool> GetContacts(const gz::sim::EntityComponentManager &ecm);
-        
-        
-        // position
-        double x;
-        double y;
-        double z;
-
-        // orientation
-        double r; // roll
-        double p; // pitch
-        double w; // yaw but y is already in use
 
     private:
-        std::shared_ptr<rclcpp::Node> node_;
-        rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr pub_;
-        std_msgs::msg::Float64MultiArray msg_;
+        std::shared_ptr<bool[]> contact_arr;              
 };
 }
 #endif

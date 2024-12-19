@@ -8,10 +8,16 @@ namespace blackbird_ros2{
         x = 0.0;
         y = 0.0;
         z = 0.0;
-        q1 = 0.0;
-        q2 = 0.0;
-        q3 = 0.0;
+        r = 0.0;
+        p = 0.0;
         w = 0.0;
+        msg_.resize(35); // state space is a 35-vector
+
+
+    }
+
+    vector<bool> BlackbirdPosePublisher::GetContacts(const gz::sim::EntityComponentManager &ecm){
+        /*TODO*/
     }
 
     BlackbirdPosePublisher::~BlackbirdPosePublisher(){
@@ -31,20 +37,13 @@ namespace blackbird_ros2{
         z = position.Z();
 
         gz::math::Quaternion quat = pose.Rot();
-        q1 = quat.X();
-        q2 = quat.Y();
-        q3 = quat.Z();
-        w = quat.W(); 
+        r = quat.Roll();
+        p = quat.Pitch();
+        w = quat.Yaw();
 
-        // position
-        msg_.position.x = x;
-        msg_.position.y = y;
-        msg_.position.z = z;
 
-        msg_.orientation.x = q1;
-        msg_.orientation.y = q2;
-        msg_.orientation.z = q3;
-        msg_.orientation.w = w;
+        
+
     }
 
     void BlackbirdPosePublisher::Configure(const gz::sim::Entity& entity,
@@ -52,8 +51,31 @@ namespace blackbird_ros2{
                         gz::sim::EntityComponentManager& ecm,
                         gz::sim::EventManager& event_mgr)
     {
-        UpdatePoses(ecm);
         // TODO: Initialize velocity to zero
+        gz::sim::Entity torso_ent = ecm.EntityByComponents(gz::sim::components::Name("torso"), gz::sim::components::Link());
+
+        if (torso_ent == gz::sim::kNullEntity)
+        {
+            throw std::runtime_error("StateUpdater::Configure() Torso link entity not found.");
+        } 
+
+        gz::sim::Link torso_link(torso_ent);
+        auto world_pose_opt = torso_link.WorldPose(ecm);
+        if (!world_pose_opt)
+        {
+            throw std::runtime_error("StateUpdater::Configure() Failed to get WorldPose for the torso link.");
+        }
+        const gz::math::Pose3d &initial_pose = *world_pose_opt;
+
+        x = initial_pose.Pos().X();
+        y = initial_pose.Pos().Y();
+        z = initial_pose.Pos().Z();
+        r = initial_pose.Rot().Roll();
+        p = initial_pose.Rot().Pitch();
+        w = initial_pose.Rot().Yaw();
+
+
+
     }
 
    void BlackbirdPosePublisher::PostUpdate(const gz::sim::UpdateInfo &_info,
@@ -61,7 +83,7 @@ namespace blackbird_ros2{
     {
         // TODO: update velocities before establishing new poses
         
-        UpdatePoses(ecm);
+        
         pub_->publish(msg_);
     }
 }
