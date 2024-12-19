@@ -24,7 +24,7 @@ env = BalanceEnv.BalanceBird(world_path="world/empty.world", render_mode="human"
 
 action_size = 10
 state_size = 35
-agent = BlackbirdDDPG(env, state_size, action_size, 50.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
+agent = BlackbirdDDPG(env, state_size, action_size, 10.0, prate=ACTOR_RATE, rate=CRITIC_RATE)
 # agent.load_weights('models')
 
 num_iters = 500000
@@ -47,10 +47,11 @@ for _ in tqdm.tqdm(range(num_iters)):
 
     agent.add_experience(reward, state, terminal)
 
-    if (terminal or episode_steps == 3000):
+    if (terminal or episode_steps == 2000):
         print(f"reached a terminal at idx {i}. resetting...")
         reward_str = f"reward at episode {num_episodes}: {sum_reward}"
         env.reset()
+        agent.reset(state)
         episode_steps = 0
         sum_reward = 0.0
         num_episodes += 1

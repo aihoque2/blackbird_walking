@@ -33,9 +33,9 @@ class BalanceBird(gym.Env):
         self.steps = 0
         
         # hyperparameters
-        self.Z_WEIGHT = 80.0
+        self.Z_WEIGHT = 600.0
         self.ROT_WEIGHT = 200.0
-        self.POWER_WEIGHT = 0.05 
+        self.POWER_WEIGHT = 0.025 
         self.SMOOTH_WEIGHT = 20. # joint velocity smoothing
 
     
@@ -73,17 +73,19 @@ class BalanceBird(gym.Env):
 
         roll, pitch, yaw = state[3], state[4], state[5]     
 
+        # states[22...32] represent the joint velocities
         power = 0.0
         for i in range(len(action)):
-            power += action[i] * state[i+22]
+            power += action[i] * np.abs(state[i+22])
 
-        reward = -self.ROT_WEIGHT*(np.abs(roll) + np.abs(pitch) + np.abs(yaw))\
-              - self.POWER_WEIGHT*power + legs_contacted*valid_height*self.Z_WEIGHT*pose_z\
-              -self.SMOOTH_WEIGHT*sum([state[i] for i in range(22, 32)])
+        reward = -self.ROT_WEIGHT*(np.abs(roll) + np.abs(pitch) + np.abs(yaw)) -self.ROT_WEIGHT*0.1*np.abs(yaw)\
+              - self.POWER_WEIGHT*power \
+                + ((l_contacted+r_contacted)/2.0)*valid_height*self.Z_WEIGHT*pose_z\
+              -self.SMOOTH_WEIGHT*sum([np.abs(state[i]) for i in range(22, 32)])
 
         terminal = self.det_terminal()
         if (terminal):
-            reward = -100000.0 # terminal_penalty
+            reward = -1000000.0 # terminal_penalty
 
         self.steps += 1
         return np.array(state, dtype=np.float32), reward, self.det_terminal(), {}

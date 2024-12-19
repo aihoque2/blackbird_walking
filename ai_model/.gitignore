@@ -1,4 +1,5 @@
 __pycache__
 train.sh
 models
+walk_models
 *.pth
