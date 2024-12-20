@@ -9,6 +9,10 @@
 
 #include <gz/sim/components/Pose.hh>
 #include <gz/sim/components/Name.hh>
+#include <gz/sim/components/Link.hh>
+#include <gz/sim/components/Collision.hh>
+#include <gz/sim/components/ContactSensorData.hh>
+
 #include <gz/math/Vector3.hh>
 #include <gz/math/Quaternion.hh>
 #include <gz/sim/System.hh>
@@ -43,7 +47,10 @@ class BlackbirdContactPlugin : public gz::sim::System,
                                 const gz::sim::EntityComponentManager &ecm);
 
     private:
-        std::shared_ptr<bool[]> contact_arr;              
+        bool contacts_[3]; // torso, footL, footR
+        std::unordered_map<std::string, std::vector<std::string>> link_map; // map link names to their collision names
+
+
 };
 }
 #endif
