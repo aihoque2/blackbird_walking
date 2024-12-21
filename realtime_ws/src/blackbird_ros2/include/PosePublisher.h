@@ -55,7 +55,6 @@ class BlackbirdPosePublisher : public gz::sim::System,
         double w; // yaw but y is already in use
 
 
-
     private:
         std::shared_ptr<rclcpp::Node> node_;
         rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_;

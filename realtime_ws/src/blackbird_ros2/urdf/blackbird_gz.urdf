@@ -609,6 +609,9 @@
     </plugin>
     <plugin name="blackbird_ros2::BlackbirdPosePublisher" filename="libBlackbirdPosePublisher.so">
     </plugin>
+
+        <plugin name="blackbird_ros2::BlackbirdContactPlugin" filename="libBlackbirdContactPlugin.so">
+    </plugin>
     </gazebo>
 
   </robot>

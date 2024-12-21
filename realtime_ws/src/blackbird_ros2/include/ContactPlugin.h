@@ -26,7 +26,7 @@
 #ifndef BLACKBIRDROS2_CONTACTPLUGIN_HH_
 #define BLACKBIRDROS2_CONTACTPLUGIN_HH_
 
-auto LINK_NAMES = {"torso", "l_foot", "r_foot"}
+auto LINK_NAMES = {"torso", "l_foot", "r_foot"};
 
 namespace blackbird_ros2{
 class BlackbirdContactPlugin : public gz::sim::System,
@@ -49,7 +49,8 @@ class BlackbirdContactPlugin : public gz::sim::System,
         bool contacts_[3]; // torso, footL, footR
         std::unordered_map<std::string, std::vector<std::string>> link_map; // map link names to their collision names
         std_msgs::msg::Float64MultiArray msg_;
-
+        std::shared_ptr<rclcpp::Node> node_;
+        rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr pub_;
 
 };
 }

@@ -46,10 +46,10 @@ namespace blackbird_ros2{
 
     }
 
-    void BlackbirdPosePublisher::Configure(const gz::sim::Entity& entity,
+    void BlackbirdPosePublisher::Configure(const gz::sim::Entity&,
                         const std::shared_ptr<const sdf::Element>&,
                         gz::sim::EntityComponentManager& ecm,
-                        gz::sim::EventManager& event_mgr)
+                        gz::sim::EventManager& )
     {
         // TODO: Initialize velocity to zero
         gz::sim::Entity torso_ent = ecm.EntityByComponents(gz::sim::components::Name("torso"), gz::sim::components::Link());
@@ -85,7 +85,7 @@ namespace blackbird_ros2{
         
         UpdatePoses(ecm);
         pub_->publish(msg_);
-        
+
     }
 }
 GZ_ADD_PLUGIN(

@@ -83,6 +83,7 @@ install(
 # C++ install
 install(TARGETS
   #BlackbirdPosePublisher
+  BlackbirdContactPlugin
   effort_example_cpp
   reverse_effort_cpp
   DESTINATION lib/${PROJECT_NAME}
