@@ -83,8 +83,9 @@ namespace blackbird_ros2{
     {
         // TODO: update velocities before establishing new poses
         
-        
+        UpdatePoses(ecm);
         pub_->publish(msg_);
+        
     }
 }
 GZ_ADD_PLUGIN(
@@ -92,4 +93,5 @@ GZ_ADD_PLUGIN(
     gz::sim::System,
     blackbird_ros2::BlackbirdPosePublisher::ISystemConfigure,
     blackbird_ros2::BlackbirdPosePublisher::ISystemPostUpdate
+    
 )

@@ -20,7 +20,6 @@
 #include <gz/plugin/Register.hh>
 
 #include <rclcpp/rclcpp.hpp>
-#include <geometry_msgs/msg/pose.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
 
 
@@ -49,6 +48,7 @@ class BlackbirdContactPlugin : public gz::sim::System,
     private:
         bool contacts_[3]; // torso, footL, footR
         std::unordered_map<std::string, std::vector<std::string>> link_map; // map link names to their collision names
+        std_msgs::msg::Float64MultiArray msg_;
 
 
 };

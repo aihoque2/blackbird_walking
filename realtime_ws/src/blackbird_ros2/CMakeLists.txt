@@ -27,8 +27,9 @@ install(DIRECTORY
   DESTINATION include
 )
 
-###UNCOMMENT THIS BLOCK WHEN READY#########
 # libraries
+
+###UNCOMMENT THIS BLOCK WHEN READY#########
 # add_library(BlackbirdPosePublisher SHARED
 # include/PosePublisher.h
 # src/PosePublisher.cpp
@@ -44,6 +45,23 @@ install(DIRECTORY
 #   std_msgs
 # )
 ############################################
+
+add_library(BlackbirdContactPlugin SHARED
+include/ContactPlugin.h
+src/ContactPlugin.cpp
+)
+
+target_include_directories(BlackbirdContactPlugin PRIVATE include)
+
+ament_target_dependencies(BlackbirdContactPlugin
+  gz-sim8
+  gz-plugin2
+  rclcpp
+  std_msgs
+)
+
+
+
 #executables
 add_executable(effort_example_cpp src/effort_example.cpp)
 ament_target_dependencies(effort_example_cpp rclcpp std_msgs)

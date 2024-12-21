@@ -17,7 +17,7 @@
 #include <gz/plugin/Register.hh>
 
 #include <rclcpp/rclcpp.hpp>
-#include <geometry_msgs/msg/pose.hpp>
+#include <geometry_msgs/msg/twist.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
 
 #ifndef BLACKBIRDROS2_POSEPUBLISHER_HH_
@@ -54,9 +54,11 @@ class BlackbirdPosePublisher : public gz::sim::System,
         double p; // pitch
         double w; // yaw but y is already in use
 
+
+
     private:
         std::shared_ptr<rclcpp::Node> node_;
-        rclcpp::Publisher<geometry_msgs::msg::Pose>::SharedPtr pub_;
+        rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr pub_;
         std_msgs::msg::Float64MultiArray msg_;
 };
 }
