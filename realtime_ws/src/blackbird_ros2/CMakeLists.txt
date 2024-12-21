@@ -30,21 +30,21 @@ install(DIRECTORY
 # libraries
 
 ###UNCOMMENT THIS BLOCK WHEN READY#########
-# add_library(BlackbirdPosePublisher SHARED
-# include/PosePublisher.h
-# src/PosePublisher.cpp
-# )
-#
-# target_include_directories(BlackbirdPosePublisher PRIVATE include)
-#
-# ament_target_dependencies(BlackbirdPosePublisher
-#   gz-sim8
-#   gz-plugin2
-#   rclcpp
-#   geometry_msgs
-#   std_msgs
-# )
-############################################
+add_library(BlackbirdPosePublisher SHARED
+include/PosePublisher.h
+src/PosePublisher.cpp
+)
+
+target_include_directories(BlackbirdPosePublisher PRIVATE include)
+
+ament_target_dependencies(BlackbirdPosePublisher
+  gz-sim8
+  gz-plugin2
+  rclcpp
+  geometry_msgs
+  std_msgs
+)
+###########################################
 
 add_library(BlackbirdContactPlugin SHARED
 include/ContactPlugin.h
@@ -82,7 +82,7 @@ install(
 
 # C++ install
 install(TARGETS
-  #BlackbirdPosePublisher
+  BlackbirdPosePublisher
   BlackbirdContactPlugin
   effort_example_cpp
   reverse_effort_cpp
