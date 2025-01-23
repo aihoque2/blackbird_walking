@@ -1,4 +1,4 @@
-# BlackBird Walking
+# Blackbird Walking
 
 this project is dedicated to creating a reinforcement learning environment (see: `gz_blackbird`) in order to create a policy to make the blackbird bipedal robot walk in a Gazebo enviornment using `ros2_control` as the middleware.
 
