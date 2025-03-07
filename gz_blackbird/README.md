@@ -1,4 +1,4 @@
-# Bipedal Walker Simulation With Gazebo Harmonic
+# Bipedal Walker Training Environment
 
 please run 
 
