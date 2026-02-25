@@ -1,0 +1,2 @@
+export GZ_SIM_SYSTEM_PLUGIN_PATH=~/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2
+export GZ_SIM_RESOURCE_PATH=~/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2
