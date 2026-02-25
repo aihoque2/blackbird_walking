@@ -47,7 +47,7 @@ namespace blackbird_ros2{
         p = initial_pose.Rot().Pitch();
         w = initial_pose.Rot().Yaw();
 
-        // intregrate contacts
+        // integrate contacts
         for (auto link_name: LINK_NAMES){
             auto link_ent = ecm.EntityByComponents(gz::sim::components::Name(link_name), gz::sim::components::Link());
             std::vector<gz::sim::Entity> collisions = ecm.ChildrenByComponents(link_ent, gz::sim::components::Collision());
