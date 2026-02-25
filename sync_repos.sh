@@ -10,7 +10,7 @@ git submodule sync --recursive
 echo "[3/6] Init/update submodules..."
 git submodule update --init --recursive
 
-if [[ "${1:-}" == "--remote" ]]; then
+if [ "${1:-}" == "--remote" ]; then
   echo "[4/6] Updating submodules to latest remote branch..."
   git submodule update --remote --merge --recursive
   echo "[5/6] Submodule status:"
