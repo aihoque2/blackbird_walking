@@ -1,0 +1,269 @@
+[0.000000] (-) TimerEvent: {}
+[0.000450] (blackbird_ros2) JobQueued: {'identifier': 'blackbird_ros2', 'dependencies': OrderedDict()}
+[0.000815] (blackbird_ros2) JobStarted: {'identifier': 'blackbird_ros2'}
+[0.009515] (blackbird_ros2) JobProgress: {'identifier': 'blackbird_ros2', 'progress': 'cmake'}
+[0.010024] (blackbird_ros2) JobProgress: {'identifier': 'blackbird_ros2', 'progress': 'build'}
+[0.010476] (blackbird_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2', '--', '-j22', '-l22'], 'cwd': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2', 'env': OrderedDict({'GZ_SIM_SYSTEM_PLUGIN_PATH': '/home/ahoque245/Projects/simulations/blackbird_walking/ros2/install/blackbird_ros2/lib/blackbird_ros2', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/', 'USER': 'ahoque245', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ahoque245', 'OLDPWD': '/home/ahoque245/Projects/simulations/blackbird_walking', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3391', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ahoque245', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ahoque245', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ahoque245/.local/share/coursier/bin', 'SESSION_MANAGER': 'local/ammar-laptop:@/tmp/.ICE-unix/3345,unix/ammar-laptop:/tmp/.ICE-unix/3345', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/5b3db2a5_f376_458f_87d1_24f1dd7e64d5', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.1331', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.066950] (blackbird_ros2) StdoutLine: {'line': b'[ 25%] Built target effort_example_cpp\n'}
+[0.067223] (blackbird_ros2) StdoutLine: {'line': b'[ 50%] Built target BlackbirdContactPlugin\n'}
+[0.067480] (blackbird_ros2) StdoutLine: {'line': b'[ 75%] Built target reverse_effort_cpp\n'}
+[0.075355] (blackbird_ros2) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/BlackbirdPosePublisher.dir/src/PosePublisher.cpp.o\x1b[0m\n'}
+[0.099659] (-) TimerEvent: {}
+[0.199987] (-) TimerEvent: {}
+[0.300499] (-) TimerEvent: {}
+[0.401026] (-) TimerEvent: {}
+[0.501489] (-) TimerEvent: {}
+[0.601998] (-) TimerEvent: {}
+[0.702496] (-) TimerEvent: {}
+[0.803026] (-) TimerEvent: {}
+[0.903496] (-) TimerEvent: {}
+[1.004032] (-) TimerEvent: {}
+[1.104531] (-) TimerEvent: {}
+[1.205047] (-) TimerEvent: {}
+[1.305541] (-) TimerEvent: {}
+[1.406086] (-) TimerEvent: {}
+[1.506609] (-) TimerEvent: {}
+[1.607110] (-) TimerEvent: {}
+[1.707606] (-) TimerEvent: {}
+[1.808155] (-) TimerEvent: {}
+[1.908648] (-) TimerEvent: {}
+[2.009149] (-) TimerEvent: {}
+[2.109679] (-) TimerEvent: {}
+[2.210187] (-) TimerEvent: {}
+[2.310724] (-) TimerEvent: {}
+[2.411227] (-) TimerEvent: {}
+[2.511747] (-) TimerEvent: {}
+[2.570677] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:1\x1b[m\x1b[K:\n'}
+[2.571174] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/PosePublisher.h:51:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kvector\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[2.571401] (blackbird_ros2) StderrLine: {'line': b'   51 |         \x1b[01;31m\x1b[Kvector\x1b[m\x1b[K<bool> GetContacts(const gz::sim::EntityComponentManager &ecm);\n'}
+[2.571598] (blackbird_ros2) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.580827] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void blackbird_ros2::BlackbirdPosePublisher::\x1b[01;32m\x1b[KConfigure\x1b[m\x1b[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.581546] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:28:117:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLink\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.581837] (blackbird_ros2) StderrLine: {'line': b'   28 | nents(gz::sim::components::Name("torso"), gz::sim::components::\x1b[01;31m\x1b[KLink\x1b[m\x1b[K());\n'}
+[2.582045] (blackbird_ros2) StderrLine: {'line': b'      |                                                                \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.582234] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.582419] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:28:117:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.582592] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Actor.hh:28\x1b[m\x1b[K,\n'}
+[2.582852] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/Conversions.hh:45\x1b[m\x1b[K,\n'}
+[2.582986] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/components/Serialization.hh:37\x1b[m\x1b[K,\n'}
+[2.583065] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/components/Name.hh:23\x1b[m\x1b[K,\n'}
+[2.583137] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/PosePublisher.h:12\x1b[m\x1b[K:\n'}
+[2.583209] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.583282] (blackbird_ros2) StderrLine: {'line': b'   51 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K\n'}
+[2.583353] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.583444] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/link.pb.h:12\x1b[m\x1b[K,\n'}
+[2.583516] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/model.pb.h:35\x1b[m\x1b[K,\n'}
+[2.583588] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/model.pb.h:12\x1b[m\x1b[K,\n'}
+[2.583668] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/scene.pb.h:39\x1b[m\x1b[K,\n'}
+[2.583743] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/scene.pb.h:12\x1b[m\x1b[K,\n'}
+[2.583820] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/Conversions.hh:33\x1b[m\x1b[K:\n'}
+[2.583893] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.583967] (blackbird_ros2) StderrLine: {'line': b'   73 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K final :\n'}
+[2.584039] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.584129] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:35:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLink\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.584236] (blackbird_ros2) StderrLine: {'line': b'   35 |         gz::sim::\x1b[01;31m\x1b[KLink\x1b[m\x1b[K torso_link(torso_ent);\n'}
+[2.584310] (blackbird_ros2) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.584379] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:35:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.584449] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.584526] (blackbird_ros2) StderrLine: {'line': b'   51 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K\n'}
+[2.584596] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.584673] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.584751] (blackbird_ros2) StderrLine: {'line': b'   73 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K final :\n'}
+[2.584819] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.585325] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:36:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktorso_link\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktorso_ent\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.585407] (blackbird_ros2) StderrLine: {'line': b'   36 |         auto world_pose_opt = \x1b[01;31m\x1b[Ktorso_link\x1b[m\x1b[K.WorldPose(ecm);\n'}
+[2.585469] (blackbird_ros2) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.585534] (blackbird_ros2) StderrLine: {'line': b'      |                               \x1b[32m\x1b[Ktorso_ent\x1b[m\x1b[K\n'}
+[2.586353] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:52:111:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLink\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.586421] (blackbird_ros2) StderrLine: {'line': b'   52 | nts(gz::sim::components::Name(link_name), gz::sim::components::\x1b[01;31m\x1b[KLink\x1b[m\x1b[K());\n'}
+[2.586466] (blackbird_ros2) StderrLine: {'line': b'      |                                                                \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.586512] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.586563] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:52:111:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.586617] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.586674] (blackbird_ros2) StderrLine: {'line': b'   51 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K\n'}
+[2.586726] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.586778] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.586830] (blackbird_ros2) StderrLine: {'line': b'   73 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K final :\n'}
+[2.586877] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.587138] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:53:111:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCollision\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.587190] (blackbird_ros2) StderrLine: {'line': b'   53 | s = ecm.ChildrenByComponents(link_ent, gz::sim::components::\x1b[01;31m\x1b[KCollision\x1b[m\x1b[K());\n'}
+[2.587236] (blackbird_ros2) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.587279] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.587321] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:53:111:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.587367] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/Conversions.hh:47\x1b[m\x1b[K:\n'}
+[2.587418] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Collision.hh:50:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Collision\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.587467] (blackbird_ros2) StderrLine: {'line': b'   50 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KCollision\x1b[m\x1b[K\n'}
+[2.587509] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.587542] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/collision.pb.h:12\x1b[m\x1b[K,\n'}
+[2.587581] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:34\x1b[m\x1b[K:\n'}
+[2.587614] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/collision.pb.h:67:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Collision\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.587888] (blackbird_ros2) StderrLine: {'line': b'   67 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KCollision\x1b[m\x1b[K final :\n'}
+[2.587922] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.587955] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:65:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KContactSensorData\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.587990] (blackbird_ros2) StderrLine: {'line': b'   65 |           auto contact = ecm.Component<gz::sim::components::\x1b[01;31m\x1b[KContactSensorData\x1b[m\x1b[K>(collision);\n'}
+[2.588025] (blackbird_ros2) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.588062] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.588095] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:65:85:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::EntityComponentManager::Component<<expression error> >(long unsigned int&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.588138] (blackbird_ros2) StderrLine: {'line': b'   65 | tact = \x1b[01;31m\x1b[Kecm.Component<gz::sim::components::ContactSensorData>(collision)\x1b[m\x1b[K;\n'}
+[2.588182] (blackbird_ros2) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.588228] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.588272] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/System.hh:24\x1b[m\x1b[K,\n'}
+[2.588314] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/PosePublisher.h:15\x1b[m\x1b[K:\n'}
+[2.588361] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ComponentTypeT> const ComponentTypeT* gz::sim::v8::EntityComponentManager::\x1b[01;32m\x1b[KComponent\x1b[m\x1b[K(gz::sim::v8::Entity) const\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.588489] (blackbird_ros2) StderrLine: {'line': b'  258 |               const ComponentTypeT *\x1b[01;36m\x1b[KComponent\x1b[m\x1b[K(const Entity _entity) const;\n'}
+[2.588525] (blackbird_ros2) StderrLine: {'line': b'      |                                     \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.588557] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.588590] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:65:85:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.588626] (blackbird_ros2) StderrLine: {'line': b'   65 | tact = \x1b[01;31m\x1b[Kecm.Component<gz::sim::components::ContactSensorData>(collision)\x1b[m\x1b[K;\n'}
+[2.588664] (blackbird_ros2) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.588708] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.588759] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:266:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ComponentTypeT> ComponentTypeT* gz::sim::v8::EntityComponentManager::\x1b[01;32m\x1b[KComponent\x1b[m\x1b[K(gz::sim::v8::Entity)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.588811] (blackbird_ros2) StderrLine: {'line': b'  266 |               ComponentTypeT *\x1b[01;36m\x1b[KComponent\x1b[m\x1b[K(const Entity _entity);\n'}
+[2.588852] (blackbird_ros2) StderrLine: {'line': b'      |                               \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.588885] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:266:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.588932] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:65:85:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.589109] (blackbird_ros2) StderrLine: {'line': b'   65 | tact = \x1b[01;31m\x1b[Kecm.Component<gz::sim::components::ContactSensorData>(collision)\x1b[m\x1b[K;\n'}
+[2.589154] (blackbird_ros2) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.589188] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.589223] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:69:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KContactSensorData\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.589262] (blackbird_ros2) StderrLine: {'line': b'   69 |         ecm.CreateComponent(collision, gz::sim::components::\x1b[01;31m\x1b[KContactSensorData\x1b[m\x1b[K());\n'}
+[2.589298] (blackbird_ros2) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.589406] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.589446] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void blackbird_ros2::BlackbirdPosePublisher::\x1b[01;32m\x1b[KPostUpdate\x1b[m\x1b[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.589500] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:84:117:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLink\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.589560] (blackbird_ros2) StderrLine: {'line': b'   84 | nents(gz::sim::components::Name("torso"), gz::sim::components::\x1b[01;31m\x1b[KLink\x1b[m\x1b[K());\n'}
+[2.589615] (blackbird_ros2) StderrLine: {'line': b'      |                                                                \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.589667] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.589704] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:84:117:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.589742] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.589777] (blackbird_ros2) StderrLine: {'line': b'   51 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K\n'}
+[2.589811] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.589842] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.589876] (blackbird_ros2) StderrLine: {'line': b'   73 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K final :\n'}
+[2.589908] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.589943] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:91:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLink\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.589977] (blackbird_ros2) StderrLine: {'line': b'   91 |         gz::sim::\x1b[01;31m\x1b[KLink\x1b[m\x1b[K torso_link(torso_ent);\n'}
+[2.590008] (blackbird_ros2) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.590038] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:91:18:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.590068] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.590097] (blackbird_ros2) StderrLine: {'line': b'   51 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K\n'}
+[2.590127] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.590157] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.590188] (blackbird_ros2) StderrLine: {'line': b'   73 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K final :\n'}
+[2.590218] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.593521] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:92:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktorso_link\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktorso_ent\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.593581] (blackbird_ros2) StderrLine: {'line': b'   92 |         auto torso_pose_opt = \x1b[01;31m\x1b[Ktorso_link\x1b[m\x1b[K.WorldPose(ecm);\n'}
+[2.593613] (blackbird_ros2) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.593649] (blackbird_ros2) StderrLine: {'line': b'      |                               \x1b[32m\x1b[Ktorso_ent\x1b[m\x1b[K\n'}
+[2.597382] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:99:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kx_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.597453] (blackbird_ros2) StderrLine: {'line': b'   99 |         \x1b[01;31m\x1b[Kx_new\x1b[m\x1b[K = torso_pose.Pos().X();\n'}
+[2.597486] (blackbird_ros2) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.600899] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:100:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ky_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.600962] (blackbird_ros2) StderrLine: {'line': b'  100 |         \x1b[01;31m\x1b[Ky_new\x1b[m\x1b[K = torso_pose.Pos().Y();\n'}
+[2.600994] (blackbird_ros2) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.604507] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:101:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kz_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.604554] (blackbird_ros2) StderrLine: {'line': b'  101 |         \x1b[01;31m\x1b[Kz_new\x1b[m\x1b[K = torso_pose.Pos().Z();\n'}
+[2.604587] (blackbird_ros2) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.608121] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:102:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kr_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.608178] (blackbird_ros2) StderrLine: {'line': b'  102 |         \x1b[01;31m\x1b[Kr_new\x1b[m\x1b[K = torso_pose.Rot().Roll();\n'}
+[2.608217] (blackbird_ros2) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.611585] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:103:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kp_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.611645] (blackbird_ros2) StderrLine: {'line': b'  103 |         \x1b[01;31m\x1b[Kp_new\x1b[m\x1b[K = torso_pose.Rot().Pitch();\n'}
+[2.611692] (blackbird_ros2) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.611735] (-) TimerEvent: {}
+[2.615170] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:104:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kw_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[2.615266] (blackbird_ros2) StderrLine: {'line': b'  104 |         \x1b[01;31m\x1b[Kw_new\x1b[m\x1b[K = torso_pose.Rot().Yaw();\n'}
+[2.615322] (blackbird_ros2) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.618512] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:114:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinfo\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[K_info\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.618593] (blackbird_ros2) StderrLine: {'line': b'  114 |         double dub_dt = std::chrono::duration<double>(\x1b[01;31m\x1b[Kinfo\x1b[m\x1b[K.dt).count();\n'}
+[2.618663] (blackbird_ros2) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.618720] (blackbird_ros2) StderrLine: {'line': b'      |                                                       \x1b[32m\x1b[K_info\x1b[m\x1b[K\n'}
+[2.619258] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:143:113:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJoint\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.619344] (blackbird_ros2) StderrLine: {'line': b'  143 | s(gz::sim::components::Name(joint_name), gz::sim::components::\x1b[01;31m\x1b[KJoint\x1b[m\x1b[K());\n'}
+[2.619402] (blackbird_ros2) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.619456] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.619513] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:143:113:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.619575] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Actor.hh:29\x1b[m\x1b[K:\n'}
+[2.619734] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Joint.hh:85:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Joint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.619793] (blackbird_ros2) StderrLine: {'line': b'   85 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KJoint\x1b[m\x1b[K\n'}
+[2.619848] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.619906] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/joint.pb.h:12\x1b[m\x1b[K,\n'}
+[2.619970] (blackbird_ros2) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/scene.pb.h:37\x1b[m\x1b[K:\n'}
+[2.620030] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/joint.pb.h:419:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Joint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.620085] (blackbird_ros2) StderrLine: {'line': b'  419 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KJoint\x1b[m\x1b[K final :\n'}
+[2.620234] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.620297] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:145:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointPosition\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.620351] (blackbird_ros2) StderrLine: {'line': b'  145 |            auto* j_pos = ecm.Component<gz::sim::components::\x1b[01;31m\x1b[KJointPosition\x1b[m\x1b[K>(joint_ent);\n'}
+[2.620407] (blackbird_ros2) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.620458] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.620508] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:149:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KJointVelocity\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.620563] (blackbird_ros2) StderrLine: {'line': b'  149 |            auto* j_vel = ecm.Component<gz::sim::components::\x1b[01;31m\x1b[KJointVelocity\x1b[m\x1b[K>(joint_ent);\n'}
+[2.620626] (blackbird_ros2) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.620684] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.620880] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:162:122:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLink\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.620946] (blackbird_ros2) StderrLine: {'line': b'  162 | nts(gz::sim::components::Name(link_name), gz::sim::components::\x1b[01;31m\x1b[KLink\x1b[m\x1b[K());\n'}
+[2.621001] (blackbird_ros2) StderrLine: {'line': b'      |                                                                \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.621054] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.621111] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:162:122:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.621171] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.621228] (blackbird_ros2) StderrLine: {'line': b'   51 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K\n'}
+[2.621288] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.621344] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Link\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.621398] (blackbird_ros2) StderrLine: {'line': b'   73 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KLink\x1b[m\x1b[K final :\n'}
+[2.621451] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.621590] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:163:115:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KCollision\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.621868] (blackbird_ros2) StderrLine: {'line': b'  163 | s = ecm.ChildrenByComponents(link_ent, gz::sim::components::\x1b[01;31m\x1b[KCollision\x1b[m\x1b[K());\n'}
+[2.621928] (blackbird_ros2) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.621976] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.622026] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:163:115:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[2.622081] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Collision.hh:50:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksdf::v14::Collision\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.622133] (blackbird_ros2) StderrLine: {'line': b'   50 |   class SDFORMAT_VISIBLE \x1b[01;36m\x1b[KCollision\x1b[m\x1b[K\n'}
+[2.622184] (blackbird_ros2) StderrLine: {'line': b'      |                          \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.622237] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/collision.pb.h:67:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgz::msgs::Collision\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.622289] (blackbird_ros2) StderrLine: {'line': b'   67 | class GZ_MSGS_VISIBLE \x1b[01;36m\x1b[KCollision\x1b[m\x1b[K final :\n'}
+[2.622343] (blackbird_ros2) StderrLine: {'line': b'      |                       \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.622397] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:167:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KContactSensorData\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::components\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.622480] (blackbird_ros2) StderrLine: {'line': b'  167 |           auto contact = ecm.Component<gz::sim::components::\x1b[01;31m\x1b[KContactSensorData\x1b[m\x1b[K>(collision);\n'}
+[2.622512] (blackbird_ros2) StderrLine: {'line': b'      |                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.622543] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.622573] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:167:85:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Kgz::sim::v8::EntityComponentManager::Component<<expression error> >(long unsigned int&) const\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.622605] (blackbird_ros2) StderrLine: {'line': b'  167 | tact = \x1b[01;31m\x1b[Kecm.Component<gz::sim::components::ContactSensorData>(collision)\x1b[m\x1b[K;\n'}
+[2.622641] (blackbird_ros2) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.622675] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.622706] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:266:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ComponentTypeT> ComponentTypeT* gz::sim::v8::EntityComponentManager::\x1b[01;32m\x1b[KComponent\x1b[m\x1b[K(gz::sim::v8::Entity)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.622737] (blackbird_ros2) StderrLine: {'line': b'  266 |               ComponentTypeT *\x1b[01;36m\x1b[KComponent\x1b[m\x1b[K(const Entity _entity);\n'}
+[2.622768] (blackbird_ros2) StderrLine: {'line': b'      |                               \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.622797] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:266:31:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.622828] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:167:85:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.622857] (blackbird_ros2) StderrLine: {'line': b'  167 | tact = \x1b[01;31m\x1b[Kecm.Component<gz::sim::components::ContactSensorData>(collision)\x1b[m\x1b[K;\n'}
+[2.622887] (blackbird_ros2) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.622917] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.622946] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class ComponentTypeT> const ComponentTypeT* gz::sim::v8::EntityComponentManager::\x1b[01;32m\x1b[KComponent\x1b[m\x1b[K(gz::sim::v8::Entity) const\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.622982] (blackbird_ros2) StderrLine: {'line': b'  258 |               const ComponentTypeT *\x1b[01;36m\x1b[KComponent\x1b[m\x1b[K(const Entity _entity) const;\n'}
+[2.623012] (blackbird_ros2) StderrLine: {'line': b'      |                                     \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.623043] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.623078] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:167:85:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[2.623109] (blackbird_ros2) StderrLine: {'line': b'  167 | tact = \x1b[01;31m\x1b[Kecm.Component<gz::sim::components::ContactSensorData>(collision)\x1b[m\x1b[K;\n'}
+[2.623139] (blackbird_ros2) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.623169] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.623199] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:164:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcollision_names\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.623237] (blackbird_ros2) StderrLine: {'line': b'  164 |             std::vector<std::string>& \x1b[01;35m\x1b[Kcollision_names\x1b[m\x1b[K = link_map[link_name];\n'}
+[2.623267] (blackbird_ros2) StderrLine: {'line': b'      |                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.623297] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:79:71:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[K_info\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.623328] (blackbird_ros2) StderrLine: {'line': b'   79 | id BlackbirdPosePublisher::PostUpdate(\x1b[01;35m\x1b[Kconst gz::sim::UpdateInfo &_info\x1b[m\x1b[K,\n'}
+[2.623358] (blackbird_ros2) StderrLine: {'line': b'      |                                       \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~\x1b[m\x1b[K\n'}
+[2.623388] (blackbird_ros2) StderrLine: {'line': b'\n'}
+[2.711881] (-) TimerEvent: {}
+[2.812269] (-) TimerEvent: {}
+[2.912687] (-) TimerEvent: {}
+[3.013013] (-) TimerEvent: {}
+[3.113350] (-) TimerEvent: {}
+[3.213762] (-) TimerEvent: {}
+[3.314182] (-) TimerEvent: {}
+[3.414504] (-) TimerEvent: {}
+[3.481548] (blackbird_ros2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/BlackbirdPosePublisher.dir/build.make:76: CMakeFiles/BlackbirdPosePublisher.dir/src/PosePublisher.cpp.o] Error 1\n'}
+[3.482093] (blackbird_ros2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/BlackbirdPosePublisher.dir/all] Error 2\n'}
+[3.482582] (blackbird_ros2) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.486219] (blackbird_ros2) CommandEnded: {'returncode': 2}
+[3.491560] (blackbird_ros2) JobEnded: {'identifier': 'blackbird_ros2', 'rc': 2}
+[3.501844] (-) EventReactorShutdown: {}

@@ -1,0 +1,125 @@
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdPosePublisher::[01;32m[KConfigure[m[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:35:18:[m[K [01;31m[Kerror: [m[K‘[01m[KLink[m[K’ is not a member of ‘[01m[Kgz::sim[m[K’
+   35 |         gz::sim::[01;31m[KLink[m[K torso_link(torso_ent);
+      |                  [01;31m[K^~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:35:18:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+In file included from [01m[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Actor.hh:28[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/Conversions.hh:45[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/components/Serialization.hh:37[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/components/Name.hh:23[m[K,
+                 from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/PosePublisher.h:12[m[K,
+                 from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:1[m[K:
+[01m[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksdf::v14::Link[m[K’
+   51 |   class SDFORMAT_VISIBLE [01;36m[KLink[m[K
+      |                          [01;36m[K^~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/link.pb.h:12[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/model.pb.h:35[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/model.pb.h:12[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/scene.pb.h:39[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/scene.pb.h:12[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/Conversions.hh:33[m[K:
+[01m[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgz::msgs::Link[m[K’
+   73 | class GZ_MSGS_VISIBLE [01;36m[KLink[m[K final :
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:36:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ktorso_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ktorso_ent[m[K’?
+   36 |         auto world_pose_opt = [01;31m[Ktorso_link[m[K.WorldPose(ecm);
+      |                               [01;31m[K^~~~~~~~~~[m[K
+      |                               [32m[Ktorso_ent[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdPosePublisher::[01;32m[KPostUpdate[m[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:91:18:[m[K [01;31m[Kerror: [m[K‘[01m[KLink[m[K’ is not a member of ‘[01m[Kgz::sim[m[K’
+   91 |         gz::sim::[01;31m[KLink[m[K torso_link(torso_ent);
+      |                  [01;31m[K^~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:91:18:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[01m[K/opt/ros/jazzy/opt/sdformat_vendor/include/gz/sdformat14/sdf/Link.hh:51:26:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksdf::v14::Link[m[K’
+   51 |   class SDFORMAT_VISIBLE [01;36m[KLink[m[K
+      |                          [01;36m[K^~~~[m[K
+[01m[K/opt/ros/jazzy/opt/gz_msgs_vendor/include/gz/msgs10/gz/msgs/details/link.pb.h:73:23:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgz::msgs::Link[m[K’
+   73 | class GZ_MSGS_VISIBLE [01;36m[KLink[m[K final :
+      |                       [01;36m[K^~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:92:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ktorso_link[m[K’ was not declared in this scope; did you mean ‘[01m[Ktorso_ent[m[K’?
+   92 |         auto torso_pose_opt = [01;31m[Ktorso_link[m[K.WorldPose(ecm);
+      |                               [01;31m[K^~~~~~~~~~[m[K
+      |                               [32m[Ktorso_ent[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:99:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kx_new[m[K’ was not declared in this scope
+   99 |         [01;31m[Kx_new[m[K = torso_pose.Pos().X();
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:100:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ky_new[m[K’ was not declared in this scope
+  100 |         [01;31m[Ky_new[m[K = torso_pose.Pos().Y();
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:101:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kz_new[m[K’ was not declared in this scope
+  101 |         [01;31m[Kz_new[m[K = torso_pose.Pos().Z();
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:102:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kr_new[m[K’ was not declared in this scope
+  102 |         [01;31m[Kr_new[m[K = torso_pose.Rot().Roll();
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:103:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kp_new[m[K’ was not declared in this scope
+  103 |         [01;31m[Kp_new[m[K = torso_pose.Rot().Pitch();
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:104:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kw_new[m[K’ was not declared in this scope
+  104 |         [01;31m[Kw_new[m[K = torso_pose.Rot().Yaw();
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:114:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kinfo[m[K’ was not declared in this scope; did you mean ‘[01m[K_info[m[K’?
+  114 |         double dub_dt = std::chrono::duration<double>([01;31m[Kinfo[m[K.dt).count();
+      |                                                       [01;31m[K^~~~[m[K
+      |                                                       [32m[K_info[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:145:62:[m[K [01;31m[Kerror: [m[K‘[01m[KJointPosition[m[K’ is not a member of ‘[01m[Kgz::sim::v8::components[m[K’
+  145 |            auto* j_pos = ecm.Component<gz::sim::components::[01;31m[KJointPosition[m[K>(joint_ent);
+      |                                                             [01;31m[K^~~~~~~~~~~~~[m[K
+
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:145:76:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgz::sim::v8::EntityComponentManager::Component<<expression error> >(long unsigned int&) const[m[K’
+  145 | o* j_pos = [01;31m[Kecm.Component<gz::sim::components::JointPosition>(joint_ent)[m[K;
+      |            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+
+In file included from [01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:851[m[K,
+                 from [01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/System.hh:24[m[K,
+                 from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/PosePublisher.h:20[m[K:
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/detail/EntityComponentManager.hh:128:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ComponentTypeT> ComponentTypeT* gz::sim::v8::EntityComponentManager::[01;32m[KComponent[m[K(gz::sim::v8::Entity)[m[K’
+  128 | ComponentTypeT *[01;36m[KEntityComponentManager[m[K::Component(const Entity _entity)
+      |                 [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/detail/EntityComponentManager.hh:128:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:145:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  145 | o* j_pos = [01;31m[Kecm.Component<gz::sim::components::JointPosition>(joint_ent)[m[K;
+      |            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ComponentTypeT> const ComponentTypeT* gz::sim::v8::EntityComponentManager::[01;32m[KComponent[m[K(gz::sim::v8::Entity) const[m[K’
+  258 |               const ComponentTypeT *[01;36m[KComponent[m[K(const Entity _entity) const;
+      |                                     [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:145:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  145 | o* j_pos = [01;31m[Kecm.Component<gz::sim::components::JointPosition>(joint_ent)[m[K;
+      |            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:149:62:[m[K [01;31m[Kerror: [m[K‘[01m[KJointVelocity[m[K’ is not a member of ‘[01m[Kgz::sim::v8::components[m[K’
+  149 |            auto* j_vel = ecm.Component<gz::sim::components::[01;31m[KJointVelocity[m[K>(joint_ent);
+      |                                                             [01;31m[K^~~~~~~~~~~~~[m[K
+
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:149:76:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgz::sim::v8::EntityComponentManager::Component<<expression error> >(long unsigned int&) const[m[K’
+  149 | o* j_vel = [01;31m[Kecm.Component<gz::sim::components::JointVelocity>(joint_ent)[m[K;
+      |            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/detail/EntityComponentManager.hh:128:17:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ComponentTypeT> ComponentTypeT* gz::sim::v8::EntityComponentManager::[01;32m[KComponent[m[K(gz::sim::v8::Entity)[m[K’
+  128 | ComponentTypeT *[01;36m[KEntityComponentManager[m[K::Component(const Entity _entity)
+      |                 [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/detail/EntityComponentManager.hh:128:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:149:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  149 | o* j_vel = [01;31m[Kecm.Component<gz::sim::components::JointVelocity>(joint_ent)[m[K;
+      |            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ComponentTypeT> const ComponentTypeT* gz::sim::v8::EntityComponentManager::[01;32m[KComponent[m[K(gz::sim::v8::Entity) const[m[K’
+  258 |               const ComponentTypeT *[01;36m[KComponent[m[K(const Entity _entity) const;
+      |                                     [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/jazzy/opt/gz_sim_vendor/include/gz/sim8/gz/sim/EntityComponentManager.hh:258:37:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:149:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  149 | o* j_vel = [01;31m[Kecm.Component<gz::sim::components::JointVelocity>(joint_ent)[m[K;
+      |            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:164:39:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcollision_names[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  164 |             std::vector<std::string>& [01;35m[Kcollision_names[m[K = link_map[link_name];
+      |                                       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:79:71:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[K_info[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   79 | id BlackbirdPosePublisher::PostUpdate([01;35m[Kconst gz::sim::UpdateInfo &_info[m[K,
+      |                                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/BlackbirdPosePublisher.dir/build.make:76: CMakeFiles/BlackbirdPosePublisher.dir/src/PosePublisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/BlackbirdPosePublisher.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

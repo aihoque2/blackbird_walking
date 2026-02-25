@@ -1,0 +1,28 @@
+[0.015s] Invoking command in '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2 -- -j22 -l22
+[0.119s] [ 66%] Built target effort_example_cpp
+[0.119s] [ 66%] Built target reverse_effort_cpp
+[0.151s] [ 83%] [32mBuilding CXX object CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o[0m
+[3.956s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In constructor ‘[01m[Kblackbird_ros2::BlackbirdContactPlugin::[01;32m[KBlackbirdContactPlugin[m[K()[m[K’:
+[3.956s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:9:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std_msgs::msg::Float64MultiArray = struct std_msgs::msg::Float64MultiArray_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct std_msgs::msg::Float64MultiArray_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kresize[m[K’
+[3.957s]     9 |         msg_.[01;31m[Kresize[m[K(3);
+[3.957s]       |              [01;31m[K^~~~~~[m[K
+[3.960s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::[01;32m[KConfigure[m[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)[m[K’:
+[3.960s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:16:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kentity[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.960s]    16 |   void BlackbirdContactPlugin::Configure([01;35m[Kconst gz::sim::Entity& entity[m[K,
+[3.960s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[3.961s] 
+[3.961s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:19:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kevent_mgr[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.961s]    19 |                         [01;35m[Kgz::sim::EventManager& event_mgr[m[K)
+[3.961s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[3.961s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::[01;32m[KPostUpdate[m[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)[m[K’:
+[3.962s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:60:39:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcollision_names[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.962s]    60 |             std::vector<std::string>& [01;35m[Kcollision_names[m[K = link_map[link_name];
+[3.962s]       |                                       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[3.962s] [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:47:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kinfo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.962s]    47 | oid BlackbirdContactPlugin::PostUpdate([01;35m[Kconst gz::sim::UpdateInfo& info[m[K,
+[3.962s]       |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+[3.962s] 
+[5.413s] gmake[2]: *** [CMakeFiles/BlackbirdContactPlugin.dir/build.make:76: CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o] Error 1
+[5.413s] gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/BlackbirdContactPlugin.dir/all] Error 2
+[5.414s] gmake: *** [Makefile:146: all] Error 2
+[5.417s] Invoked command in '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2 -- -j22 -l22

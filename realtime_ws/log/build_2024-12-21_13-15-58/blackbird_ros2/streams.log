@@ -1,0 +1,343 @@
+[0.016s] Invoking command in '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2 -- -j22 -l22
+[0.056s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.335s] -- Found control_msgs: 5.3.0 (/opt/ros/jazzy/share/control_msgs/cmake)
+[0.371s] -- Found rosidl_generator_c: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.379s] -- Found rosidl_generator_cpp: 4.6.4 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.389s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.401s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.572s] -- Found pluginlib: 5.4.2 (/opt/ros/jazzy/share/pluginlib/cmake)
+[0.577s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.577s] -- Found rclcpp: 28.1.5 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.612s] -- Found rmw_implementation_cmake: 7.3.1 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.613s] -- Found rmw_fastrtps_cpp: 8.4.1 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.630s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.646s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.677s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.693s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[0.716s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.780s] -- Found rclcpp_action: 28.1.5 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[0.790s] -- Looking for gz-sim8 -- found version 8.7.0
+[0.795s] -- Searching for dependencies of gz-sim8
+[0.796s] -- Looking for sdformat14 -- found version 14.5.0
+[0.796s] -- Searching for dependencies of sdformat14
+[0.803s] -- Checking for module 'tinyxml2'
+[0.834s] --   Found tinyxml2, version 10.0.0
+[0.905s] -- Looking for gz-math7 -- found version 7.5.1
+[0.906s] -- Searching for dependencies of gz-math7
+[0.906s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.906s] -- Searching for dependencies of gz-utils2
+[0.908s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.908s] -- Searching for dependencies of gz-utils2
+[0.908s] -- Searching for <gz-utils2> component [cli]
+[0.909s] -- Looking for gz-utils2-cli -- found version 2.2.0
+[0.909s] -- Searching for dependencies of gz-utils2-cli
+[0.911s] -- Looking for gz-plugin2 -- found version 2.0.3
+[0.911s] -- Searching for dependencies of gz-plugin2
+[0.911s] -- Looking for gz-utils2 -- found version 2.2.0
+[0.912s] -- Searching for <gz-plugin2> component [loader]
+[0.912s] -- Looking for gz-plugin2-loader -- found version 2.0.3
+[0.913s] -- Searching for dependencies of gz-plugin2-loader
+[0.913s] -- Searching for <gz-plugin2> component [register]
+[0.914s] -- Looking for gz-plugin2-register -- found version 2.0.3
+[0.914s] -- Searching for dependencies of gz-plugin2-register
+[0.915s] -- Looking for gz-transport13 -- found version 13.4.0
+[0.915s] -- Searching for dependencies of gz-transport13
+[0.959s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[0.966s] -- Checking for module 'libzmq >= 4'
+[0.990s] --   Found libzmq, version 4.3.5
+[1.087s] -- Checking for module 'uuid'
+[1.115s] --   Found uuid, version 2.39.3
+[1.186s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.187s] -- Looking for gz-msgs10 -- found version 10.3.1
+[1.187s] -- Searching for dependencies of gz-msgs10
+[1.217s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.217s] -- Looking for gz-math7 -- found version 7.5.1
+[1.429s] -- Searching for <gz-transport13> component [log]
+[1.430s] -- Looking for gz-transport13-log -- found version 13.4.0
+[1.430s] -- Searching for dependencies of gz-transport13-log
+[1.430s] -- Searching for <gz-transport13> component [parameters]
+[1.431s] -- Looking for gz-transport13-parameters -- found version 13.4.0
+[1.431s] -- Searching for dependencies of gz-transport13-parameters
+[1.432s] -- Looking for gz-msgs10 -- found version 10.3.1
+[1.432s] -- Looking for gz-common5 -- found version 5.7.0
+[1.433s] -- Searching for dependencies of gz-common5
+[1.433s] -- Looking for gz-utils2 -- found version 2.2.0
+[1.433s] -- Looking for dlfcn.h - found
+[1.433s] -- Looking for libdl - found
+[1.449s] -- Searching for <gz-common5> component [av]
+[1.449s] -- Looking for gz-common5-av -- found version 5.7.0
+[1.449s] -- Searching for dependencies of gz-common5-av
+[1.458s] -- Checking for module 'libswscale'
+[1.488s] --   Found libswscale, version 7.5.100
+[1.565s] -- Checking for module 'libavdevice >= 56.4.100'
+[1.595s] --   Found libavdevice, version 60.3.100
+[1.690s] -- Checking for module 'libavformat'
+[1.719s] --   Found libavformat, version 60.16.100
+[1.815s] -- Checking for module 'libavcodec'
+[1.844s] --   Found libavcodec, version 60.31.102
+[1.933s] -- Checking for module 'libavutil'
+[1.964s] --   Found libavutil, version 58.29.100
+[2.037s] -- Searching for <gz-common5> component [events]
+[2.037s] -- Looking for gz-common5-events -- found version 5.7.0
+[2.038s] -- Searching for dependencies of gz-common5-events
+[2.038s] -- Looking for gz-math7 -- found version 7.5.1
+[2.039s] -- Searching for <gz-common5> component [graphics]
+[2.040s] -- Looking for gz-common5-graphics -- found version 5.7.0
+[2.040s] -- Searching for dependencies of gz-common5-graphics
+[2.040s] -- Looking for gz-math7 -- found version 7.5.1
+[2.043s] -- Searching for <gz-common5> component [io]
+[2.044s] -- Looking for gz-common5-io -- found version 5.7.0
+[2.044s] -- Searching for dependencies of gz-common5-io
+[2.045s] -- Searching for <gz-common5> component [profiler]
+[2.045s] -- Looking for gz-common5-profiler -- found version 5.7.0
+[2.046s] -- Searching for dependencies of gz-common5-profiler
+[2.047s] -- Looking for gz-fuel_tools9 -- found version 9.1.0
+[2.047s] -- Searching for dependencies of gz-fuel_tools9
+[2.113s] -- Checking for module 'jsoncpp'
+[2.141s] --   Found jsoncpp, version 1.9.5
+[2.230s] -- Checking for module 'yaml-0.1'
+[2.261s] --   Found yaml-0.1, version 0.2.5
+[2.343s] -- Checking for module 'libzip'
+[2.369s] --   Found libzip, version 1.7.3
+[2.434s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.434s] -- Looking for gz-common5 -- found version 5.7.0
+[2.435s] -- Searching for dependencies of gz-common5
+[2.435s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.435s] -- Looking for dlfcn.h - found
+[2.435s] -- Looking for libdl - found
+[2.448s] -- Searching for <gz-common5> component [testing]
+[2.448s] -- Looking for gz-common5-testing -- found version 5.7.0
+[2.449s] -- Searching for dependencies of gz-common5-testing
+[2.450s] -- Looking for gz-math7 -- found version 7.5.1
+[2.451s] -- Looking for gz-msgs10 -- found version 10.3.1
+[2.453s] -- Looking for gz-gui8 -- found version 8.3.0
+[2.453s] -- Searching for dependencies of gz-gui8
+[2.488s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.489s] -- Looking for gz-math7 -- found version 7.5.1
+[2.489s] -- Looking for gz-common5 -- found version 5.7.0
+[2.490s] -- Looking for gz-plugin2 -- found version 2.0.3
+[2.490s] -- Looking for gz-transport13 -- found version 13.4.0
+[2.491s] -- Looking for gz-rendering8 -- found version 8.2.1
+[2.491s] -- Searching for dependencies of gz-rendering8
+[2.492s] -- Looking for gz-math7 -- found version 7.5.1
+[2.492s] -- Searching for dependencies of gz-math7
+[2.492s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.493s] -- Searching for <gz-math7> component [eigen3]
+[2.493s] -- Looking for gz-math7-eigen3 -- found version 7.5.1
+[2.493s] -- Searching for dependencies of gz-math7-eigen3
+[2.495s] -- Looking for gz-common5 -- found version 5.7.0
+[2.496s] -- Searching for dependencies of gz-common5
+[2.496s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.496s] -- Looking for dlfcn.h - found
+[2.497s] -- Looking for libdl - found
+[2.507s] -- Searching for <gz-common5> component [graphics]
+[2.507s] -- Searching for <gz-common5> component [events]
+[2.507s] -- Searching for <gz-common5> component [geospatial]
+[2.507s] -- Looking for gz-common5-geospatial -- found version 5.7.0
+[2.507s] -- Searching for dependencies of gz-common5-geospatial
+[2.508s] -- Looking for gz-math7 -- found version 7.5.1
+[2.508s] -- Looking for gz-common5 -- found version 5.7.0
+[2.510s] -- Looking for gz-plugin2 -- found version 2.0.3
+[2.510s] -- Searching for dependencies of gz-plugin2
+[2.511s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.511s] -- Searching for <gz-plugin2> component [all]
+[2.511s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.3
+[2.512s] -- Looking for gz-plugin2 -- found version 2.0.3
+[2.513s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.518s] -- Looking for gz-msgs10 -- found version 10.3.1
+[2.540s] -- Looking for gz-physics7 -- found version 7.4.0
+[2.540s] -- Searching for dependencies of gz-physics7
+[2.541s] -- Looking for gz-common5 -- found version 5.7.0
+[2.542s] -- Looking for gz-math7 -- found version 7.5.1
+[2.542s] -- Looking for gz-plugin2 -- found version 2.0.3
+[2.543s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.544s] -- Searching for <gz-physics7> component [heightmap]
+[2.545s] -- Looking for gz-physics7-heightmap -- found version 7.4.0
+[2.545s] -- Searching for dependencies of gz-physics7-heightmap
+[2.545s] -- Looking for gz-common5 -- found version 5.7.0
+[2.546s] -- Searching for <gz-physics7> component [mesh]
+[2.546s] -- Looking for gz-physics7-mesh -- found version 7.4.0
+[2.547s] -- Searching for dependencies of gz-physics7-mesh
+[2.547s] -- Looking for gz-common5 -- found version 5.7.0
+[2.548s] -- Searching for <gz-physics7> component [sdf]
+[2.548s] -- Looking for gz-physics7-sdf -- found version 7.4.0
+[2.549s] -- Searching for dependencies of gz-physics7-sdf
+[2.549s] -- Looking for sdformat14 -- found version 14.5.0
+[2.550s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.550s] -- Searching for dependencies of gz-sensors8
+[2.571s] -- Looking for gz-math7 -- found version 7.5.1
+[2.572s] -- Looking for gz-common5 -- found version 5.7.0
+[2.572s] -- Looking for gz-transport13 -- found version 13.4.0
+[2.573s] -- Looking for gz-rendering8 -- found version 8.2.1
+[2.574s] -- Looking for gz-msgs10 -- found version 10.3.1
+[2.574s] -- Looking for sdformat14 -- found version 14.5.0
+[2.575s] -- Searching for <gz-sensors8> component [air_pressure]
+[2.575s] -- Looking for gz-sensors8-air_pressure -- found version 8.2.1
+[2.576s] -- Searching for dependencies of gz-sensors8-air_pressure
+[2.576s] -- Searching for <gz-sensors8> component [air_speed]
+[2.577s] -- Looking for gz-sensors8-air_speed -- found version 8.2.1
+[2.577s] -- Searching for dependencies of gz-sensors8-air_speed
+[2.578s] -- Searching for <gz-sensors8> component [altimeter]
+[2.578s] -- Looking for gz-sensors8-altimeter -- found version 8.2.1
+[2.578s] -- Searching for dependencies of gz-sensors8-altimeter
+[2.579s] -- Searching for <gz-sensors8> component [imu]
+[2.579s] -- Looking for gz-sensors8-imu -- found version 8.2.1
+[2.580s] -- Searching for dependencies of gz-sensors8-imu
+[2.580s] -- Searching for <gz-sensors8> component [force_torque]
+[2.581s] -- Looking for gz-sensors8-force_torque -- found version 8.2.1
+[2.581s] -- Searching for dependencies of gz-sensors8-force_torque
+[2.582s] -- Searching for <gz-sensors8> component [logical_camera]
+[2.582s] -- Looking for gz-sensors8-logical_camera -- found version 8.2.1
+[2.583s] -- Searching for dependencies of gz-sensors8-logical_camera
+[2.583s] -- Searching for <gz-sensors8> component [magnetometer]
+[2.584s] -- Looking for gz-sensors8-magnetometer -- found version 8.2.1
+[2.584s] -- Searching for dependencies of gz-sensors8-magnetometer
+[2.585s] -- Searching for <gz-sensors8> component [navsat]
+[2.585s] -- Looking for gz-sensors8-navsat -- found version 8.2.1
+[2.585s] -- Searching for dependencies of gz-sensors8-navsat
+[2.586s] -- Searching for <gz-sensors8> component [dvl]
+[2.586s] -- Looking for gz-sensors8-dvl -- found version 8.2.1
+[2.587s] -- Searching for dependencies of gz-sensors8-dvl
+[2.587s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.587s] -- Searching for dependencies of gz-sensors8
+[2.615s] -- Looking for gz-math7 -- found version 7.5.1
+[2.615s] -- Looking for gz-common5 -- found version 5.7.0
+[2.616s] -- Looking for gz-transport13 -- found version 13.4.0
+[2.616s] -- Looking for gz-rendering8 -- found version 8.2.1
+[2.617s] -- Looking for gz-msgs10 -- found version 10.3.1
+[2.618s] -- Looking for sdformat14 -- found version 14.5.0
+[2.618s] -- Searching for <gz-sensors8> component [rendering]
+[2.619s] -- Looking for gz-sensors8-rendering -- found version 8.2.1
+[2.619s] -- Searching for dependencies of gz-sensors8-rendering
+[2.620s] -- Searching for <gz-sensors8> component [rendering]
+[2.620s] -- Searching for <gz-sensors8> component [lidar]
+[2.621s] -- Looking for gz-sensors8-lidar -- found version 8.2.1
+[2.621s] -- Searching for dependencies of gz-sensors8-lidar
+[2.622s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.622s] -- Searching for <gz-sensors8> component [gpu_lidar]
+[2.623s] -- Looking for gz-sensors8-gpu_lidar -- found version 8.2.1
+[2.623s] -- Searching for dependencies of gz-sensors8-gpu_lidar
+[2.624s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.624s] -- Searching for <gz-sensors8> component [camera]
+[2.625s] -- Looking for gz-sensors8-camera -- found version 8.2.1
+[2.625s] -- Searching for dependencies of gz-sensors8-camera
+[2.625s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.626s] -- Searching for <gz-sensors8> component [boundingbox_camera]
+[2.627s] -- Looking for gz-sensors8-boundingbox_camera -- found version 8.2.1
+[2.627s] -- Searching for dependencies of gz-sensors8-boundingbox_camera
+[2.628s] -- Searching for <gz-sensors8> component [segmentation_camera]
+[2.628s] -- Looking for gz-sensors8-segmentation_camera -- found version 8.2.1
+[2.629s] -- Searching for dependencies of gz-sensors8-segmentation_camera
+[2.629s] -- Searching for <gz-sensors8> component [depth_camera]
+[2.630s] -- Looking for gz-sensors8-depth_camera -- found version 8.2.1
+[2.630s] -- Searching for dependencies of gz-sensors8-depth_camera
+[2.630s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.631s] -- Searching for <gz-sensors8> component [rgbd_camera]
+[2.632s] -- Looking for gz-sensors8-rgbd_camera -- found version 8.2.1
+[2.632s] -- Searching for dependencies of gz-sensors8-rgbd_camera
+[2.632s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.633s] -- Searching for <gz-sensors8> component [thermal_camera]
+[2.634s] -- Looking for gz-sensors8-thermal_camera -- found version 8.2.1
+[2.634s] -- Searching for dependencies of gz-sensors8-thermal_camera
+[2.634s] -- Looking for gz-sensors8 -- found version 8.2.1
+[2.635s] -- Searching for <gz-sensors8> component [wide_angle_camera]
+[2.636s] -- Looking for gz-sensors8-wide_angle_camera -- found version 8.2.1
+[2.636s] -- Searching for dependencies of gz-sensors8-wide_angle_camera
+[2.637s] -- Looking for gz-rendering8 -- found version 8.2.1
+[2.638s] -- Looking for gz-math7 -- found version 7.5.1
+[2.638s] -- Looking for gz-utils2 -- found version 2.2.0
+[2.661s] -- Looking for gz-plugin2 -- found version 2.0.3
+[2.665s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.762s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.763s] -- Configured cppcheck include dirs: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include
+[2.763s] -- Configured cppcheck exclude dirs and/or files: 
+[2.763s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.764s] -- Configured 'flake8' exclude dirs and/or files: 
+[2.764s] -- Added test 'lint_cmake' to check CMake code style
+[2.764s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.766s] -- Added test 'uncrustify' to check C / C++ code style
+[2.767s] -- Configured uncrustify additional arguments: 
+[2.767s] -- Added test 'xmllint' to check XML markup files
+[2.769s] -- Configuring done (2.7s)
+[2.802s] -- Generating done (0.0s)
+[2.809s] -- Build files have been written to: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2
+[2.878s] [ 33%] Built target effort_example_cpp
+[2.881s] [ 66%] Built target reverse_effort_cpp
+[2.887s] [ 83%] [32m[1mLinking CXX shared library libBlackbirdContactPlugin.so[0m
+[3.236s] [100%] Built target BlackbirdContactPlugin
+[3.251s] Invoked command in '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2 -- -j22 -l22
+[3.263s] Invoking command in '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2
+[3.273s] -- Install configuration: ""
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/include
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/include/PosePublisher.h
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/include/ContactPlugin.h
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//launch
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//launch/blackbird_gz.launch.py
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//launch/blackbird_rviz.launch.py
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//rviz
+[3.273s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//rviz/basic.rviz
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//rviz/blackbird.rviz
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf/blackbird_gz.urdf
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf/blackbird.urdf
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf/blackbird.sdf
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird
+[3.274s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_022.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_015.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_025.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_019.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_020.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_024.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_012.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_006.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/add_underscore.py
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_031.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_026.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_001.stl
+[3.275s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_011.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_028.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_027.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_023.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_017.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_029.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_014.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_003.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_005.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_013.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_030.stl
+[3.276s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_004.stl
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_021.stl
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_010.stl
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_018.stl
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_016.stl
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_009.stl
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//config
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//config/blackbird_effort_controller.yaml
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/reverse_effort.cpp
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/ContactPlugin.cpp
+[3.277s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/effort_example.cpp
+[3.278s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/PosePublisher.cpp
+[3.278s] -- Installing: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/libBlackbirdContactPlugin.so
+[3.278s] -- Set non-toolchain portion of runtime path of "/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/libBlackbirdContactPlugin.so" to ""
+[3.278s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/effort_example_cpp
+[3.278s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/reverse_effort_cpp
+[3.278s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/ament_index/resource_index/package_run_dependencies/blackbird_ros2
+[3.278s] -- Installing: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/ament_index/resource_index/parent_prefix_path/blackbird_ros2
+[3.278s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/ament_prefix_path.sh
+[3.278s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/ament_prefix_path.dsv
+[3.278s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/path.sh
+[3.279s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/path.dsv
+[3.279s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.bash
+[3.279s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.sh
+[3.279s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.zsh
+[3.279s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.dsv
+[3.280s] -- Installing: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/package.dsv
+[3.280s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/ament_index/resource_index/packages/blackbird_ros2
+[3.280s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.280s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/cmake/blackbird_ros2Config.cmake
+[3.280s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/cmake/blackbird_ros2Config-version.cmake
+[3.280s] -- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/package.xml
+[3.280s] Invoked command in '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2

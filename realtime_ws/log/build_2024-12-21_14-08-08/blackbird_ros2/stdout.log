@@ -1,0 +1,4 @@
+[ 25%] Built target effort_example_cpp
+[ 50%] Built target reverse_effort_cpp
+[ 75%] Built target BlackbirdContactPlugin
+[ 87%] [32mBuilding CXX object CMakeFiles/BlackbirdPosePublisher.dir/src/PosePublisher.cpp.o[0m

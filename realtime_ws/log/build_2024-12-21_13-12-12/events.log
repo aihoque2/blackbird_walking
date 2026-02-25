@@ -1,0 +1,82 @@
+[0.000000] (-) TimerEvent: {}
+[0.000808] (blackbird_ros2) JobQueued: {'identifier': 'blackbird_ros2', 'dependencies': OrderedDict()}
+[0.001665] (blackbird_ros2) JobStarted: {'identifier': 'blackbird_ros2'}
+[0.010620] (blackbird_ros2) JobProgress: {'identifier': 'blackbird_ros2', 'progress': 'cmake'}
+[0.011357] (blackbird_ros2) JobProgress: {'identifier': 'blackbird_ros2', 'progress': 'build'}
+[0.012263] (blackbird_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2', '--', '-j22', '-l22'], 'cwd': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ahoque245', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ahoque245', 'OLDPWD': '/home/ahoque245/Projects/simulations/blackbird_walking', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '3391', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ahoque245', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ahoque245', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/ahoque245/.local/share/coursier/bin', 'SESSION_MANAGER': 'local/ammar-laptop:@/tmp/.ICE-unix/3345,unix/ammar-laptop:/tmp/.ICE-unix/3345', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/c5955278_6af8_430d_9dbc_f1dbaf9b6f0b', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.1331', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/build/blackbird_ros2', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099381] (-) TimerEvent: {}
+[0.120672] (blackbird_ros2) StdoutLine: {'line': b'[ 33%] Built target reverse_effort_cpp\n'}
+[0.121314] (blackbird_ros2) StdoutLine: {'line': b'[ 66%] Built target effort_example_cpp\n'}
+[0.128796] (blackbird_ros2) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o\x1b[0m\n'}
+[0.199505] (-) TimerEvent: {}
+[0.299921] (-) TimerEvent: {}
+[0.400370] (-) TimerEvent: {}
+[0.500831] (-) TimerEvent: {}
+[0.601269] (-) TimerEvent: {}
+[0.701654] (-) TimerEvent: {}
+[0.802163] (-) TimerEvent: {}
+[0.902616] (-) TimerEvent: {}
+[1.003034] (-) TimerEvent: {}
+[1.103394] (-) TimerEvent: {}
+[1.203793] (-) TimerEvent: {}
+[1.304182] (-) TimerEvent: {}
+[1.404625] (-) TimerEvent: {}
+[1.505038] (-) TimerEvent: {}
+[1.605440] (-) TimerEvent: {}
+[1.705903] (-) TimerEvent: {}
+[1.806344] (-) TimerEvent: {}
+[1.906751] (-) TimerEvent: {}
+[2.007146] (-) TimerEvent: {}
+[2.107643] (-) TimerEvent: {}
+[2.208119] (-) TimerEvent: {}
+[2.308559] (-) TimerEvent: {}
+[2.409004] (-) TimerEvent: {}
+[2.509455] (-) TimerEvent: {}
+[2.609950] (-) TimerEvent: {}
+[2.710404] (-) TimerEvent: {}
+[2.810820] (-) TimerEvent: {}
+[2.911222] (-) TimerEvent: {}
+[3.011721] (-) TimerEvent: {}
+[3.112153] (-) TimerEvent: {}
+[3.212490] (-) TimerEvent: {}
+[3.312833] (-) TimerEvent: {}
+[3.413227] (-) TimerEvent: {}
+[3.513595] (-) TimerEvent: {}
+[3.613982] (-) TimerEvent: {}
+[3.714406] (-) TimerEvent: {}
+[3.814789] (-) TimerEvent: {}
+[3.816815] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:16:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid blackbird_ros2::BlackbirdContactPlugin::\x1b[01;32m\x1b[KConfigure\x1b[m\x1b[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.817406] (blackbird_ros2) StderrLine: {'line': b'   16 |     void \x1b[01;31m\x1b[KBlackbirdContactPlugin\x1b[m\x1b[K::Configure(const gz::sim::Entity& ,\n'}
+[3.817514] (blackbird_ros2) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.817599] (blackbird_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:1\x1b[m\x1b[K:\n'}
+[3.817681] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/ContactPlugin.h:40:14:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate is: \xe2\x80\x98\x1b[01m\x1b[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::\x1b[01;32m\x1b[KConfigure\x1b[m\x1b[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.817769] (blackbird_ros2) StderrLine: {'line': b'   40 |         void \x1b[01;36m\x1b[KConfigure\x1b[m\x1b[K(const gz::sim::Entity& entity,\n'}
+[3.817868] (blackbird_ros2) StderrLine: {'line': b'      |              \x1b[01;36m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.817955] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/ContactPlugin.h:32:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass blackbird_ros2::BlackbirdContactPlugin\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.818038] (blackbird_ros2) StderrLine: {'line': b'   32 | class \x1b[01;36m\x1b[KBlackbirdContactPlugin\x1b[m\x1b[K : public gz::sim::System,\n'}
+[3.818118] (blackbird_ros2) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.820315] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::\x1b[01;32m\x1b[KPostUpdate\x1b[m\x1b[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.820493] (blackbird_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:60:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcollision_names\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.820585] (blackbird_ros2) StderrLine: {'line': b'   60 |             std::vector<std::string>& \x1b[01;35m\x1b[Kcollision_names\x1b[m\x1b[K = link_map[link_name];\n'}
+[3.820672] (blackbird_ros2) StderrLine: {'line': b'      |                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.914961] (-) TimerEvent: {}
+[4.015425] (-) TimerEvent: {}
+[4.115912] (-) TimerEvent: {}
+[4.216358] (-) TimerEvent: {}
+[4.316685] (-) TimerEvent: {}
+[4.417070] (-) TimerEvent: {}
+[4.517486] (-) TimerEvent: {}
+[4.617873] (-) TimerEvent: {}
+[4.718219] (-) TimerEvent: {}
+[4.818559] (-) TimerEvent: {}
+[4.918907] (-) TimerEvent: {}
+[5.019303] (-) TimerEvent: {}
+[5.119767] (-) TimerEvent: {}
+[5.220119] (-) TimerEvent: {}
+[5.295829] (blackbird_ros2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/BlackbirdContactPlugin.dir/build.make:76: CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o] Error 1\n'}
+[5.296784] (blackbird_ros2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/BlackbirdContactPlugin.dir/all] Error 2\n'}
+[5.297235] (blackbird_ros2) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.300411] (blackbird_ros2) CommandEnded: {'returncode': 2}
+[5.314457] (blackbird_ros2) JobEnded: {'identifier': 'blackbird_ros2', 'rc': 2}
+[5.320187] (-) TimerEvent: {}
+[5.324936] (-) EventReactorShutdown: {}

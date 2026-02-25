@@ -1,0 +1,86 @@
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In constructor ‘[01m[Kblackbird_ros2::BlackbirdContactPlugin::[01;32m[KBlackbirdContactPlugin[m[K()[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:9:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing std_msgs::msg::Float64MultiArray = struct std_msgs::msg::Float64MultiArray_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct std_msgs::msg::Float64MultiArray_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kresize[m[K’
+    9 |         msg_.[01;31m[Kresize[m[K(3);
+      |              [01;31m[K^~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::[01;32m[KConfigure[m[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:32:88:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision_ent[m[K’ was not declared in this scope; did you mean ‘[01m[Kcollision[m[K’?
+   32 | ion_name_opt = ecm.ComponentData<gz::sim::components::Name>([01;31m[Kcollision_ent[m[K);
+      |                                                             [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                             [32m[Kcollision[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:36:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kcontact[m[K’ was not declared in this scope; did you mean ‘[01m[Kcontacts_[m[K’?
+   36 |                 if ([01;31m[Kcontact[m[K == nullptr)
+      |                     [01;31m[K^~~~~~~[m[K
+      |                     [32m[Kcontacts_[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:38:109:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kconst char*[m[K’ and ‘[01m[Kconst char [2][m[K’ to binary ‘[01m[Koperator+[m[K’
+   38 | gin::Configure() creating contact component for: " << [32m[Klink_name[m[K [01;31m[K+[m[K [34m[K"\n"[m[K;
+      |                                                       [32m[K~~~~~~~~~[m[K [01;31m[K^[m[K [34m[K~~~~[m[K
+      |                                                       [32m[K|[m[K           [34m[K|[m[K
+      |                                                       [32m[Kconst char*[m[K [34m[Kconst char [2][m[K
+
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:16:67:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kentity[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   16 |   void BlackbirdContactPlugin::Configure([01;35m[Kconst gz::sim::Entity& entity[m[K,
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:19:48:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kevent_mgr[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   19 |                         [01;35m[Kgz::sim::EventManager& event_mgr[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::[01;32m[KPostUpdate[m[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:59:115:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+   59 | lision_ents = ecm.ChildrenByComponents(link_ent, gz::sim::components::[01;31m[K)[m[K
+      |                                                                       [01;31m[K^[m[K
+
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:69:31:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kdouble[m[K’ and ‘[01m[Kdouble[m[K’ to binary ‘[01m[Koperator|[m[K’
+   69 |                     [01;31m[Kcontacted |= 1.0[m[K;
+      |                     [01;31m[K~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:69:31:[m[K [01;36m[Knote: [m[K  in evaluation of ‘[01m[Koperator|=(double, double)[m[K’
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:72:31:[m[K [01;31m[Kerror: [m[Kinvalid operands of types ‘[01m[Kdouble[m[K’ and ‘[01m[Kdouble[m[K’ to binary ‘[01m[Koperator|[m[K’
+   72 |                     [01;31m[Kcontacted |= 0.0[m[K;
+      |                     [01;31m[K~~~~~~~~~~^~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:72:31:[m[K [01;36m[Knote: [m[K  in evaluation of ‘[01m[Koperator|=(double, double)[m[K’
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:79:43:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd_msgs::msg::Float64MultiArray_<std::allocator<void> >::_data_type[m[K’ {aka ‘[01m[Kstd::vector<double>[m[K’} and ‘[01m[Kstd::remove_reference<std::vector<float>&>::type[m[K’ {aka ‘[01m[Kstd::vector<float>[m[K’})
+   79 |         msg_.data = std::move(contact_data[01;31m[K)[m[K;
+      |                                           [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/13/vector:72[m[K,
+                 from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/ContactPlugin.h:8[m[K,
+                 from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:1[m[K:
+[01m[K/usr/include/c++/13/bits/vector.tcc:210:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(const std::vector<_Tp, _Alloc>&) [35m[K[with _Tp = double; _Alloc = std::allocator<double>][m[K[m[K’
+  210 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/vector.tcc:211:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::remove_reference<std::vector<float>&>::type[m[K’ {aka ‘[01m[Kstd::vector<float>[m[K’} to ‘[01m[Kconst std::vector<double>&[m[K’
+  211 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/13/vector:66[m[K:
+[01m[K/usr/include/c++/13/bits/stl_vector.h:766:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(std::vector<_Tp, _Alloc>&&) [35m[K[with _Tp = double; _Alloc = std::allocator<double>][m[K[m[K’
+  766 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_vector.h:766:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::remove_reference<std::vector<float>&>::type[m[K’ {aka ‘[01m[Kstd::vector<float>[m[K’} to ‘[01m[Kstd::vector<double>&&[m[K’
+  766 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 [01;36m[K~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_vector.h:788:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(std::initializer_list<_Tp>) [35m[K[with _Tp = double; _Alloc = std::allocator<double>][m[K[m[K’
+  788 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/13/bits/stl_vector.h:788:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::remove_reference<std::vector<float>&>::type[m[K’ {aka ‘[01m[Kstd::vector<float>[m[K’} to ‘[01m[Kstd::initializer_list<double>[m[K’
+  788 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:80:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing rclcpp::Publisher<std_msgs::msg::Float64MultiArray_<std::allocator<void> > >::SharedPtr = class std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64MultiArray_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64MultiArray_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Kpublish[m[K’
+   80 |         pub_.[01;31m[Kpublish[m[K(msg_);
+      |              [01;31m[K^~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:47:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kinfo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   47 | oid BlackbirdContactPlugin::PostUpdate([01;35m[Kconst gz::sim::UpdateInfo& info[m[K,
+      |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+
+In file included from [01m[K/opt/ros/jazzy/opt/gz_plugin_vendor/include/gz/plugin2/gz/plugin/Register.hh:22[m[K,
+                 from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/ContactPlugin.h:20[m[K:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In constructor ‘[01m[Kgz::plugin::{anonymous}::ExecuteWhenLoadingLibrary0::[01;32m[KExecuteWhenLoadingLibrary0[m[K()[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:87:21:[m[K [01;31m[Kerror: [m[K‘[01m[KBlackbirdPosePublisher[m[K’ is not a member of ‘[01m[Kblackbird_ros2[m[K’
+   87 |     blackbird_ros2::[01;31m[KBlackbirdPosePublisher[m[K::ISystemConfigure,
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:84:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+   84 | [01;31m[KGZ_ADD_PLUGIN[m[K(
+      | [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:84:1:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before ‘[01m[K([m[K’ token
+   84 | [01;31m[KGZ_ADD_PLUGIN[m[K(
+      | [01;31m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/BlackbirdContactPlugin.dir/build.make:76: CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/BlackbirdContactPlugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

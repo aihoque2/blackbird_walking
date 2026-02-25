@@ -1,0 +1,84 @@
+[ 25%] Built target reverse_effort_cpp
+[ 50%] Built target effort_example_cpp
+[ 75%] Built target BlackbirdContactPlugin
+[ 87%] [32mBuilding CXX object CMakeFiles/BlackbirdPosePublisher.dir/src/PosePublisher.cpp.o[0m
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdPosePublisher::[01;32m[KPostUpdate[m[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/PosePublisher.cpp:164:39:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcollision_names[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  164 |             std::vector<std::string>& [01;35m[Kcollision_names[m[K = link_map[link_name];
+      |                                       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX shared library libBlackbirdPosePublisher.so[0m
+[100%] Built target BlackbirdPosePublisher
+-- Install configuration: ""
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/include
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/include/PosePublisher.h
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/include/ContactPlugin.h
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//launch
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//launch/blackbird_gz.launch.py
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//launch/blackbird_rviz.launch.py
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//rviz
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//rviz/basic.rviz
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//rviz/blackbird.rviz
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf/blackbird_gz.urdf
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf/blackbird.urdf
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//urdf/blackbird.sdf
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_022.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_015.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_025.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_019.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_020.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_024.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_012.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_006.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/add_underscore.py
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_031.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_026.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_001.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_011.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_028.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_027.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_023.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_017.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_029.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_014.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_003.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_005.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_013.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_030.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_004.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_021.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_010.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_018.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_016.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//meshes/blackbird/Assembly_Mockup_v27_009.stl
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//config
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//config/blackbird_effort_controller.yaml
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/reverse_effort.cpp
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/ContactPlugin.cpp
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/effort_example.cpp
+-- Installing: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2//src/PosePublisher.cpp
+-- Installing: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/libBlackbirdPosePublisher.so
+-- Set non-toolchain portion of runtime path of "/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/libBlackbirdPosePublisher.so" to ""
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/libBlackbirdContactPlugin.so
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/effort_example_cpp
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/lib/blackbird_ros2/reverse_effort_cpp
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/ament_index/resource_index/package_run_dependencies/blackbird_ros2
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/ament_index/resource_index/parent_prefix_path/blackbird_ros2
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/ament_prefix_path.sh
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/path.sh
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/environment/path.dsv
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.bash
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.sh
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.zsh
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/local_setup.dsv
+-- Installing: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/package.dsv
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/ament_index/resource_index/packages/blackbird_ros2
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/cmake/blackbird_ros2Config.cmake
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/cmake/blackbird_ros2Config-version.cmake
+-- Up-to-date: /home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/install/blackbird_ros2/share/blackbird_ros2/package.xml

@@ -1,0 +1,24 @@
+[ 33%] Built target reverse_effort_cpp
+[ 66%] Built target effort_example_cpp
+[ 83%] [32mBuilding CXX object CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o[0m
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:16:10:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid blackbird_ros2::BlackbirdContactPlugin::[01;32m[KConfigure[m[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager)[m[K’
+   16 |     void [01;31m[KBlackbirdContactPlugin[m[K::Configure(const gz::sim::Entity& ,
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:1[m[K:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/ContactPlugin.h:40:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::[01;32m[KConfigure[m[K(const gz::sim::v8::Entity&, const std::shared_ptr<const sdf::v14::Element>&, gz::sim::v8::EntityComponentManager&, gz::sim::v8::EventManager&)[m[K’
+   40 |         void [01;36m[KConfigure[m[K(const gz::sim::Entity& entity,
+      |              [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/ContactPlugin.h:32:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass blackbird_ros2::BlackbirdContactPlugin[m[K’ defined here
+   32 | class [01;36m[KBlackbirdContactPlugin[m[K : public gz::sim::System,
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::[01;32m[KPostUpdate[m[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)[m[K’:
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:60:39:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcollision_names[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   60 |             std::vector<std::string>& [01;35m[Kcollision_names[m[K = link_map[link_name];
+      |                                       [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:47:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kinfo[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   47 | oid BlackbirdContactPlugin::PostUpdate([01;35m[Kconst gz::sim::UpdateInfo& info[m[K,
+      |                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
+
+gmake[2]: *** [CMakeFiles/BlackbirdContactPlugin.dir/build.make:76: CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/BlackbirdContactPlugin.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
