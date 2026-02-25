@@ -1,0 +1,7 @@
+[submodule "realtime_ws/src/blackbird_ros2"]
+	path = realtime_ws/src/blackbird_ros2
+	url = https://github.com/aihoque2/blackbird_ros2.git
+[submodule "realtime_ws/src/gz_ros2_control"]
+	path = realtime_ws/src/gz_ros2_control
+	url = https://github.com/ros-controls/gz_ros2_control.git
+	branch = jazzy

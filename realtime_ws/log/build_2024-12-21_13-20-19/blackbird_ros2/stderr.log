@@ -1,4 +1,0 @@
-[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:[m[K In member function ‘[01m[Kvirtual void blackbird_ros2::BlackbirdContactPlugin::[01;32m[KPostUpdate[m[K(const gz::sim::v8::UpdateInfo&, const gz::sim::v8::EntityComponentManager&)[m[K’:
-[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:60:39:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcollision_names[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
-   60 |             std::vector<std::string>& [01;35m[Kcollision_names[m[K = link_map[link_name];
-      |                                       [01;35m[K^~~~~~~~~~~~~~~[m[K

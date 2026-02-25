@@ -1,8 +1,0 @@
-In file included from [01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/src/ContactPlugin.cpp:1[m[K:
-[01m[K/home/ahoque245/Projects/simulations/blackbird_walking/realtime_ws/src/blackbird_ros2/include/ContactPlugin.h:23:10:[m[K [01;31m[Kfatal error: [m[Kgeometry_msgs/msg/pose.hpp: No such file or directory
-   23 | #include [01;31m[K<geometry_msgs/msg/pose.hpp>[m[K
-      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
-compilation terminated.
-gmake[2]: *** [CMakeFiles/BlackbirdContactPlugin.dir/build.make:76: CMakeFiles/BlackbirdContactPlugin.dir/src/ContactPlugin.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/BlackbirdContactPlugin.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
