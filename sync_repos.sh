@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env shell
 set -eu
 
 echo "[1/6] Pull main repo..."
