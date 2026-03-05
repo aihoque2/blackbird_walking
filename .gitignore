@@ -1,2 +1,6 @@
 .vscode
 *.pth
+build/
+install/
+log/
+
