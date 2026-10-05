@@ -42,8 +42,8 @@ like gz-sim::systems::ApplyJointForce
 
 
 static const std::vector<std::string> JOINT_NAMES = 
-{"l_hip_roll", "l_hip_yaw", "l_hip_pitch", "l_knee", "l_ankle", 
-"r_hip_roll", "r_hip_yaw", "r_hip_pitch", "r_knee", "r_ankle"};
+{"l_hip_roll", "l_hip_pitch", "l_hip_yaw", "l_knee", "l_ankle", 
+"r_hip_roll", "r_hip_pitch", "r_hip_yaw", "r_knee", "r_ankle"};
 
 class EffortController: public gz::sim::System, 
                          public gz::sim::ISystemPreUpdate,

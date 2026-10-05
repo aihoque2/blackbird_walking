@@ -50,7 +50,7 @@ void ECMProvider::Configure(const gz::sim::Entity& entity,
 void ECMProvider::PreUpdate(const gz::sim::UpdateInfo& info,
                         gz::sim::EntityComponentManager& ecm)
 {
-    // update the existing shared ptr
+    // update the existing raw ptr
     ecm_ = &ecm;
 }
 
